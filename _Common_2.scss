@@ -1,0 +1,3804 @@
+/* Scss Document */
+/*@import 'Generic';
+@import 'Autonation-Brand-Var';*/
+@import 'compass/css3';
+
+/* primary button*/
+
+/* year selector choose */
+.xb-selector-year-choose .item{
+	@extend .xb-button-primary;
+}
+
+/* secondary button */
+.xb-button{
+	&-secondary{
+		background-color: $primary-gradient-start !important; 
+		background: $primary-gradient-start; /* Old browsers */
+	background: -moz-linear-gradient(top,  $primary-gradient-start 0%, $primary-gradient-stop 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  $primary-gradient-start 0%,$primary-gradient-stop 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  $primary-gradient-start 0%,$primary-gradient-stop 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary-gradient-start', endColorstr='$primary-gradient-stop',GradientType=0 ) !important; /* IE6-9 */
+		@include border-radius($medium-radius); 
+			.x-btn-inner, span{
+				line-height: $big-button;
+		    	font-size:$large-text;
+		   	 	color:$secondary-text-color !important;
+		    	font-weight:$bold !important;
+				font-family: $secondary-font-family !important;
+				background-image: none !important;
+			}
+		&:hover, &.x-over,
+		&:active, &.x-pressed, &.x-button-pressing{
+			background-color: $primary-gradient-stop; 
+			@include filter-gradient($primary-gradient-stop, $primary-gradient-start, vertical);
+			$experimental-support-for-svg: true;
+			@include background-image(linear-gradient(top,  $primary-gradient-stop 0%, $primary-gradient-start 100%));
+		}
+	}
+}
+/* eo. secondary button */
+
+/* movealong button */
+.xb-button{
+	&-movealong{
+		@include border-radius($medium-radius); 
+		@extend .xb-button-secondary;
+		box-shadow: $none;
+		&.disabled{
+			background-color: $secondary-color;
+		}
+
+		&.x-item-disabled{
+			opacity: 0.3 !important;
+		}
+	}
+}
+/* eo. movealong button */
+
+/*step-back-button*/
+.xb-button-stepback{
+	@include border-radius($medium-radius);
+	box-shadow: $none;
+	border:0px !important;
+	background-color: $tertiary-gradient-start !important; 
+					  @include filter-gradient($tertiary-gradient-start, $tertiary-gradient-stop, vertical);
+					  $experimental-support-for-svg: true;
+					  @include background-image(linear-gradient(top,  $tertiary-gradient-start 1%, $tertiary-gradient-stop 100%));
+	.xb-stepnumber,.x-button-label{
+		font-family:$secondary-font-family;
+		font-size: $list-header;
+		color: $secondary-text-color;
+		background-color: transparent !important;
+		background-image: none !important;
+		box-shadow: $none;
+		text-align: center;
+		text-transform: $text-transform-cap;
+	}
+}
+/*eo. step-back-button*/
+
+.xb-header-img{
+	background-image: $open-page-image;
+	width: 313px;
+	height: 297px;
+}
+
+.xb-paragraph{
+	font-family: $primary-font-family !important;
+	font-size: $content-header;
+	color: $primary-text-color;
+	font-weight: $normal;
+	
+	&-bold{
+		font-weight: $bold;
+	}
+}
+.xb-paragraph-alert{
+	font-family: $primary-font-family !important;
+	font-weight: $normal !important;
+	color: $alert !important;
+	background-color: $selector-bg-color !important;
+}
+
+.xb-label, .xb-label .x-innerhtml{
+			color: $primary-text-color;
+			font-family: $secondary-font-family;
+			font-size: $regular-title;
+			text-transform: $text-transform-up;
+			text-align:center;
+	    	text-decoration:none;
+		}	
+
+/* year selector */
+.xb-selector{
+	border: 1px solid $secondary-color;
+	@include border-radius($medium-radius); 
+
+	&-year{
+		.xb-label{
+			color: $primary-text-color;
+		}
+		.xb-selector-year-choose .item{
+			@include border-radius($medium-radius); 
+			& span{
+				color: $secondary-text-color;
+				font-family:$secondary-font-family;
+			}
+			&.item-selected span{
+				color: $primary-text-color;
+			}
+		}
+	}
+}
+/* eo. year selector */
+
+/* left arrow */
+.xb-arrow-left{
+	&.x-btn.btn-previous, &.x-btn, .x-btn.btn-previous, &.backButton, &{
+		&:before{
+			content: $arrow-left;
+			font-family: $icon-family;
+			font-size: 1.4em;
+			margin-left: 5px;
+			color: $dropdown-bg-color;
+		}
+		&:hover:before, &.x-over, &.x-pressed{
+			color: $secondary-color;
+		}
+	}
+	&.x-btn.btn-previous, &.x-btn, .x-btn.btn-previous, &{
+		background-image: none !important;
+	}
+}
+.xb-pagination, .xt-list-pagination{
+	&.x-btn.btn-previous, &.x-btn, .x-btn.btn-previous, &.backButton{
+		&:before{
+			content: $arrow-left;
+			font-family: $icon-family;
+			font-size: 1.4em;
+			margin-left: 5px;
+			color: $dropdown-bg-color;
+		}
+		&:hover:before, &.x-over, &.x-pressed{
+			color: $secondary-color;
+		}
+	}
+	&.x-btn.btn-previous, &.x-btn, .x-btn.btn-previous{
+		background-image: none !important;
+	}
+}
+/* eo. left arrow */
+
+/* right arrow */		
+.xb-arrow-right{
+	&.x-btn.btn-next, &.x-btn, .x-btn.btn-next, span &.nextButton, &{
+		&:before{
+			content: $arrow-right;
+			font-family: $icon-family;
+			font-size: 1.4em;
+			margin-left: 5px;
+			color: $dropdown-bg-color;
+		}
+		&:hover:before, &.x-over, &.x-pressed{
+			color: $secondary-color;
+		}
+	}
+	
+	&.x-btn.btn-next, &.x-btn, .x-btn.btn-next, span &.nextButton, &{
+		background-image: none !important;
+	}
+}
+.xb-pagination, .xt-list-pagination{
+	&.x-btn.btn-next, &.x-btn, .x-btn.btn-next, span &.nextButton{
+		&:before{
+			content: $arrow-right;
+			font-family: $icon-family;
+			font-size: 1.4em;
+			margin-left: 5px;
+			color: $dropdown-bg-color;
+		}
+		&:hover:before, &.x-over, &.x-pressed{
+			color: $secondary-color;
+		}
+	}
+	
+	&.x-btn.btn-next, &.x-btn, .x-btn.btn-next, span &.nextButton{
+		background-image: none !important;
+	}
+}
+/* eo. right arrow */
+
+.xb-arrow-down{
+	background-image: none !important;
+	background-color: transparent !important;
+	&:before{
+		content: $arrow-down;
+		font-family: $icon-family;
+		color: $secondary-text-color;
+		font-size: 1.1em;
+		line-height: 16px;
+	}
+}
+
+/* pagination dot */
+.xb-pagination .x-btn.btn-pagination,
+.accordionPanel .btn-pagination,
+.xb-panel-setting-subsection .x-docked-bottom .btn-pagination{ 
+		height: 8px !important;
+		width: 8px !important;
+		background-color: $secondary-color !important;
+		border-radius: 50%;
+		background-image: none !important;
+		&.x-over, &:hover, &.x-focus, &.x-pressed{
+			background-color: $primary-color !important;
+		}
+	
+}
+/* eo. pagination dot */
+/*model check icon*/
+.xb-model-check-icon{
+	background-image: none;
+	height:48px;
+	width: 48px;
+	background-color: $tertiary-color;
+	@include border-top-right-radius($pc-round-radius);
+		&:before{
+			content: $check-mark;
+			font-family: $icon-family;
+			color: $secondary-text-color;
+			font-size: 2em;
+	    	margin-left: 5px;
+	    	line-height: 58px;
+		}
+}
+
+.xb-inline-link{
+	.x-btn-button .x-btn-inner, &{
+		font-family: $secondary-font-family !important;
+		color: $in-line-link;
+		font-size: $small-text;
+	}
+}
+
+/* triangle down */
+.triangle-down-icon{
+	background-image: none !important;
+	width: 0; 
+	height: 0; 
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-top: 11px solid $primary-color;
+	margin-left: 80px;
+	width: auto !important;
+}
+/* e.o. triangle down */
+
+/* selector model */
+.xb-selector{
+	border: 1px solid $secondary-color;
+	@include border-radius($medium-radius); 
+	&-model{
+		.xb-paragraph-bold{
+			font-size: $large-text;
+	
+			span{
+				font-weight: $normal;
+			}
+    	}
+		
+		.xb-model-button{
+			.item{
+				border: 1px solid $secondary-color;
+				.xb-model-name{
+					@include border-radius($no-radius);
+					display: block;
+					text-align:left;
+					background-color:$secondary-color;
+					color:$secondary-text-color;
+				}
+				&:hover, &.item-over{
+					border: 1px solid $tertiary-color;
+					.xb-model-name{
+						color:$secondary-text-color;
+						background-color:$tertiary-color;
+					}
+				}			
+				&:active, &.item-selected, &:active:hover, &.item-selected.item-over{
+					border: 1px solid $primary-color;
+					.xb-model-name{
+						background-color:$primary-color;
+						color:$tertiary-color;
+					}
+				}
+			}
+		}
+	}
+}
+/* eo. selector model */
+
+/* panel, dropdown menu, trim label, condition-form */
+.xb-panel{
+	 .xb-panel-img{
+		border: 1px solid $secondary-color !important;
+	}
+
+	&-dropdown, &-form{
+		background-color: $secondary-color;
+		.x-form-arrow-trigger{
+			background-image: none !important;
+			&:before{
+				content: $arrow-down;
+				speak: none;
+				font-family: $icon-family;
+				font-size: 1.1em;
+				color: $secondary-color;
+				position: relative;
+				top: 2px;	
+			}	
+		}
+		.x-form-trigger-wrap{
+			background-color: $dropdown-bg-color;
+		    border: 1px solid $secondary-color;
+		    @include border-radius($no-radius); 
+		    height: 25px !important;
+		}
+	}
+
+	&-label-title, .small{
+		text-transform: $text-transform-up;
+		font-size: $tiny-text;
+		color: $primary-text-color !important;
+	}
+
+	input{
+		font-family: $primary-font-family !important;
+		font-size: $content-header;
+		font-weight: $bold !important;
+		color: $primary-text-color;
+	}
+
+	&-condition{
+		background-color: $tertiary-color;
+		color: $secondary-text-color;
+		label{
+			color: $secondary-text-color !important;
+			font-family: $primary-font-family !important;
+		}
+		.x-form-trigger-wrap{
+			background-color: $dropdown-bg-color;
+			border: 1px solid $secondary-color;
+		}
+		.x-form-arrow-trigger{
+			background-image: none !important;
+			&:before{
+				content: $arrow-down;
+				font-family: $icon-family;
+				font-size: 1.1em;
+				color: $secondary-color;
+				position: relative;
+				top:3px;
+			}	
+		}
+	}
+
+	&-form{
+		background-color: transparent;
+		label.x-form-item-label{
+			font-weight: $bold;
+			color:$tertiary-text-color;
+			font-family: $primary-font-family !important;
+		}
+		.x-form-trigger-wrap{
+			background-color: $dropdown-bg-color;
+			border: 1px solid $secondary-color;
+		}
+		.x-form-arrow-trigger{
+			background-image: none !important;
+			&:before{
+				content: $arrow-down;
+				font-family: $icon-family;
+				font-size: 1.1em;
+				color: $secondary-color;
+			}
+		}
+		input{
+			font-weight: $bold;
+			color:$tertiary-text-color;
+			font-family: $primary-font-family;
+			border: 0px !important;
+		}
+
+	}	
+}
+/* eo. panel, dropdown menu, trim label, condition-form */
+
+/* toggle */
+.xb-toggle{
+	&-left{
+		@include border-top-left-radius($medium-radius);
+		@include border-bottom-left-radius($medium-radius);
+		border: 0px 1px 0px 0px;
+		border-color: $secondary-color;
+		.icon{
+			background-image: none !important;
+			&:before{
+				content: $grid;
+				font-family: $icon-family;
+				font-size: 16px;
+				color: $primary-text-color;
+				margin-left: -55px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	&-center{
+		@include border-radius($no-radius);
+		border: 0px 1px 0px 0px;
+		border-color: $secondary-color;
+		.icon{
+			background-image: none !important;
+			&:before{
+				content: $list;
+				font-family: $icon-family;
+				font-size: 16px;
+				color: $primary-text-color;
+				margin-left: -50px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	&-right{
+		@include border-top-right-radius($medium-radius);
+		@include border-bottom-right-radius($medium-radius);
+		.icon{
+			background-image: none !important;
+			&:before{
+				content: $guide;
+				font-family: $icon-family;
+				font-size: 16px;
+				color: $primary-text-color;
+				margin-left: -55px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	span{
+		color:$primary-text-color !important;
+		font-family: $primary-font-family !important;
+		font-size: $large-text !important;
+		font-weight: $normal;
+		background-position: 0px 0px !important;
+	}
+
+	 &-left,&-center,&-right{
+		&:hover span, &.x-over span, &:hover .icon:before, &.x-over .icon:before{
+			color:$secondary-text-color!important;
+		}
+		&:active span, &.x-pressed span, &.x-pressed.x-over span, &:active .icon:before, &.x-pressed .icon:before, &.x-pressed.x-over .icon:before{
+			color: $primary-text-color!important;
+		}
+	}
+}
+/* eo. toggle */
+ 
+/* print */
+.xb-print{
+	.xb-paragraph{
+		font-size: $small-text !important;
+	}
+	.icon, &{
+		background-image: none !important;
+		&:before{
+			content: $print;
+			font-family: $icon-family;
+			font-size: $list-header;
+			color: $secondary-text-color;
+			line-height: $list-header !important;
+			font-weight: 100;
+		}
+	}
+}
+/* eo. print */
+
+/* close icon */
+.xb-close-icon{
+	width: 25px;
+	height: 25px;
+	background-color: $tertiary-color;
+	background-image: none !important;
+	@include border-radius($circle-radius); 
+	&:before{
+		content: $close;
+		font-family: $icon-family;
+		color: $secondary-text-color;
+		font-size: 1.2em;
+		margin-left: 4px;
+		line-height: 24px;
+	}
+}
+/* eo. close icon */
+
+/* tab-mileage tab-year*/
+.xb-tab,.xb-list{
+	&-header, &-mileage{
+		background-color: $tertiary-color;
+		box-shadow: none;
+		color: $secondary-text-color;
+		font-family: $primary-font-family;
+		font-size: $small-text;
+		font-weight: $bold;
+	}
+	&-mileage .xb-tab-mileage-text{
+		color: $secondary-text-color;
+		font-family: $primary-font-family;
+		font-size: $small-text;
+		font-weight: $bold;
+		.icon{
+			background-image: none !important;
+		}
+	}
+	&-mileage:hover, &-mileage.hover, &-mileage.x-item-over,
+	&-mileage:active, &-mileage.mileage-selected,&-mileage:active:hover, &-mileage.mileage-selected.hover,&-mileage.x-item-selected.x-item-over, &-mileage.x-item-selected{
+		background-color: $primary-color !important;
+		box-shadow: none;
+		.icon:before{
+			content: $drop-down;
+			font-family: $icon-family;
+			font-size: 16px;
+			color: $primary-gradient-start;
+			line-height: 0px !important;
+			position: relative;
+    		top: -4px;
+    		margin-left: 100px;
+		}
+		.xb-tab-mileage-text, xb-list-header{
+			background-color: $primary-color !important;
+			color: $primary-text-color !important;
+		}
+	} 
+	&-mileage:active, &-mileage.mileage-selected,&-mileage:active:hover, &-mileage.mileage-selected.hover,&-mileage.x-item-selected.x-item-over, &-mileage.x-item-selected{
+		background-color: $tab-selected-color !important;
+		border: 1px 1px 0px 1px solid $tertiary-color !important;
+		.xb-tab-mileage-text, .xb-list-header{
+			background-color: $tab-selected-color !important;
+			color: $primary-text-color !important;
+		}
+	}
+
+	&-year{
+		color:$primary-text-color;
+		font-weight: $bold;
+		font-family: $primary-font-family;
+		font-size:$small-text;
+		font-weight: $bold;
+		.tick{
+			background-image: none !important;
+			.mileage-col-inner:before{
+				content: $drop-down;
+				font-family: $icon-family;
+				font-size: 16px;
+				color: $primary-gradient-start;
+				line-height: 0px !important;
+				position: relative;
+				top: -3px;
+			}
+			.xb-tab-mileage-text{
+				position: relative;
+    			top: -6px;
+			}
+			&.mileage-selected .mileage-col-inner{
+				padding-top: 0px !important;
+			}
+		}
+	}
+}
+/* eo. tab-mileage tab-year*/
+
+.xb-list .xb-tab-mileage .xb-tab-mileage-text{
+	font-size: $regular-title !important;
+}
+
+.tableList-value{
+	color: $primary-text-color;
+}
+
+/* menu table*/
+.xb-table{
+	&-header, &-header .ellipsis{
+		background-color: $secondary-color !important;
+		color: $secondary-text-color;
+		font-family: $primary-font-family;
+		font-weight: $bold;
+	}
+}
+.slide-grid{
+	.mileage{
+		background-color: $secondary-color !important;
+		color: $secondary-text-color;
+		font-family: $primary-font-family;
+		font-weight: $bold;
+		&:hover, &.hover{
+			background-color: $table-hover-color !important;
+		}
+	}
+	.xb-inline-link{
+		text-align: left !important;
+	}
+	.totalPrice-div{
+		color: $primary-text-color !important;
+		font-family: $primary-font-family;
+	}
+}
+
+.odd .ellipsis, .odd .cell-div,.odd .col-Index-div{
+		background-color: $dropdown-bg-color !important;
+		color: $primary-text-color;
+		font-family: $primary-font-family;
+		background-image: none!important;
+	}
+.even .ellipsis, .even .cell-div, .even .col-Index-div{
+		background-color: $tab-selected-color !important;
+		color: $primary-text-color;
+		font-family: $primary-font-family;
+		background-image: none!important;
+		&.hover{
+			background-color: $secondary-color !important;
+		}
+	}
+/* eo. menu table*/
+
+/* cell dot*/
+.xb-dot{
+		height: 8px;
+		width: 8px;
+		background-color: $primary-color !important;
+		border-radius: 50%;
+		background-image: none !important;
+		margin-left: 35px;
+   		margin-top: 8px;
+   		display: block;
+}
+/* eo.cell dot */
+
+/* list */
+.xb-list{
+	th{
+		background-color: $tertiary-color !important;
+		}
+	&-header{
+		font-size: $large-text !important;
+	}
+	&-title{
+		font-size: $list-header;
+		font-family: $primary-font-family !important;
+	}
+	&-subtitle{
+		font-size: $content-header;
+		font-family: $primary-font-family !important;
+	}
+}	
+.xb-list-body, .tableList{
+	&-head-content{
+		font-size: $regular-title ;
+	}
+	 td{
+		background-color: $price-bg-color !important;
+	}
+	li{
+		font-size: $large-text !important;
+		color: $primary-text-color !important;
+		font-family: $primary-font-family !important;
+	}
+	span{
+		color: $primary-text-color !important;
+		font-weight: $bold;
+	}
+}
+/* eo. list */
+
+/* popup compare-package*/
+.xb-popup{
+	&-label{
+		font-family: $primary-font-family !important;
+		color: $primary-text-color;
+		font-size:$small-text;
+	}
+	&-header{
+		color: $primary-text-color;
+	}
+	&-package-header, &-package-footer{
+		background-color: $tertiary-color;
+		button{
+			border: 0px !important;
+			@extend .xb-button-secondary;
+			span{
+				font-size:$small-text;
+			}
+		}
+	}
+	&-package-cell{
+		border-color: $tertiary-color;
+		.xb-dot{
+    		margin-top: 5px;
+		}
+	}
+	&-package-price{
+		font-family: $primary-font-family !important;
+		font-size: $content-header;
+		color: $secondary-text-color !important;
+	}
+	.print-small{
+			background-image: none !important;
+			padding-left: 19px;
+			&:before{
+				content: $print;
+				font-family: $icon-family;
+				font-size: 12px;
+				color: $secondary-text-color;
+				line-height: 12px !important;
+    			margin: 0px 5px 0px -20px;
+    			font-weight: 100;
+			}
+	}
+}
+/* popup compare-package*/
+
+.x-tip span div{
+	color: $in-line-link !important;
+}
+
+
+
+/*------------------------------------------------------------ Mobile --------------------------------------------------------------------*/
+
+/*deal name*/
+.xb-dealer-name{
+		font-size: $large-text;
+		font-family: $primary-font-family;
+		font-weight: $bold;
+		color: $primary-text-color;
+	
+}
+/*eo. deal name*/
+
+/*small text*/
+.xb-label-comment,.xb-label-comment .x-innerhtml, .xb-label-comment span,
+.xb-language .x-innerhtml{
+	font-size: $small-text;
+	font-family: $primary-font-family;
+	color: $primary-text-color;
+}
+/*eo. small text*/
+
+/*open page menu board*/
+.xb-board{
+	background: $secondary-gradient-start; /* Old browsers */
+	background: -moz-linear-gradient(top,  $secondary-gradient-start 0%, $secondary-gradient-stop 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  $secondary-gradient-start 0%,$secondary-gradient-stop 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  $secondary-gradient-start 0%,$secondary-gradient-stop 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary-gradient-start', endColorstr='$secondary-gradient-stop',GradientType=0 ); /* IE6-9 */
+	&-header .x-innerhtml{
+		font-size: $boarder-header;
+		font-family: $primary-font-family;
+		font-weight: $bold;
+		color: $primary-text-color;
+	}
+	.xb-button-movealong{
+		@include border-radius($large-radius); 
+		 .x-button-label{
+			font-size: $boarder-header;
+			text-align: center !important;
+			line-height: $normal !important;
+		}
+	}
+}
+/*eo. open page menu board*/
+
+/*language*/
+.xb-language{
+	border-top: solid 1px $dropdown-bg-color !important;
+}
+/*eo. language*/
+
+/*top navigation*/
+.xb-top-navigation{
+	.xb-navigation-step{
+		@include border-radius($medium-radius); 
+		box-shadow: $none;
+		background-color: $tertiary-gradient-start !important; 
+						  @include filter-gradient($tertiary-gradient-start, $tertiary-gradient-stop, vertical);
+						  $experimental-support-for-svg: true;
+						  @include background-image(linear-gradient(top,  $tertiary-gradient-start 1%, $tertiary-gradient-stop 100%));
+		.xb-stepnumber{
+			font-family:$secondary-font-family;
+			font-size: $page-header;
+			color: $secondary-text-color;
+			background-color: transparent !important;
+			background-image: none !important;
+			box-shadow: $none;
+		}
+		.wizard-button{
+			background-color: transparent !important;
+			background-image: none !important;
+			box-shadow: $none;
+			span{
+				font-size:$content-header;
+				font-family: $secondary-font-family;
+			}		
+		}
+		.xb-stepname{
+			font-size:$content-header;
+			font-family: $secondary-font-family;
+			color: $secondary-text-color;
+		}
+
+		&.top-navigation-selected{
+			@extend .xb-button-secondary;
+		}
+	}
+	.x-progressstep-current .xb-navigation-step{
+		@extend .xb-button-secondary;
+	}
+}
+
+/*eo. top navigation*/
+
+/*selction step*/
+.xb-selector-step{
+	box-shadow: $none;
+	border: 1px solid $secondary-color !important ;
+	background-color: $selector-bg-color !important;
+	background-image: none !important;
+	@include border-radius($large-radius); 
+	/*step finish icon*/
+	&.step-accordion-complete .step-accordion-summary.xb-selector-icon{
+		background-image: none!important;
+		&:before{
+			content: $check-mark;
+			font-family: $icon-family;
+			font-size: 1.4em;
+			margin-left: 5px;
+			color: $dropdown-bg-color;
+			float: right;
+			margin-right: 11px;
+    		margin-top: 3px;
+		}
+	}
+	/*eo. step finish icon*/
+	.xb-label .x-innerhtml{
+		font-size: $page-titles !important;
+		text-align: left;
+	}
+	/*make year button*/
+	.xb-button-primary.x-item-selected{
+		.item-label{
+			background-image: none!important;
+			font-family: $primary-font-family !important;
+			font-weight: $normal !important;
+			font-size: $large-text !important;
+
+			&:before{
+				content: $check-mark;
+				font-family: $icon-family;
+				color: $tertiary-color;
+				font-size: 1.2em;
+				margin-left: -18px;
+				margin-top:-2px;
+				margin-right: 9px;
+				float: right;
+			}
+		}
+	}
+	.btn-year.xb-button-primary .item-label:before{
+		margin-right: -3px;
+	}
+	.xb-label.xb-show-more{ 
+		background-image: none !important;
+		.x-innerhtml{
+			font-size: $small-text !important;
+			text-align: right;
+			&:before{
+				content: $arrow-down;
+				font-family: $icon-family;
+				color: $tertiary-color;
+				font-size: 1em;
+				margin-top: -1px;
+    			margin-right: -21px;
+    			float: right;
+			}
+		}
+	}
+	/*eo. make year button*/
+
+	/*model button*/
+	.xb-model-button{
+		border: 1px solid $secondary-color;
+		.xb-button-primary{
+			@include border-radius($no-radius);
+			background-color: $secondary-color;
+			.xb-label{
+				font-size: $small-text !important;
+				text-align: left;
+			}
+		}
+		&.x-item-selected{
+			border: 1px solid $primary-color !important;
+			.xb-model-checkicon{
+				background-image: none;
+				height:23px;
+				width: 23px;
+				background-color: $tertiary-color;
+				@include border-top-right-radius($round-radius);
+				&:before{
+					content: $check-mark;
+					font-family: $icon-family;
+					color: $secondary-text-color;
+					font-size: 0.8em;
+					margin-left: 2px;
+				}
+			}
+			.xb-button-primary{
+				@include border-radius($no-radius);
+				background-color: $primary-color;
+				.xb-label{
+					color: $secondary-text-color;
+				}
+			}
+		}
+	}
+	/*eo. model button*/
+
+	/*mileage form*/
+	.xb-form-mileage{
+		.xb-label-form{
+			border: 1px solid $secondary-color;
+			color: $secondary-color !important;
+			line-height: 14px;
+		}
+		/*.xb-icon-clear*/.x-clear-icon{
+			background-image: none;
+			width: 25px;
+			height: 25px;
+			@include border-radius($circle-radius);
+			background-color: $secondary-color;
+			margin-top: -13px;
+			&:before{
+				content: $close-icon;
+				font-family: $icon-family;
+				color: $secondary-text-color;
+				font-size: 1em;
+				margin-left: 5px;
+				line-height: 24px;
+			}
+		}
+	}
+	/*eo. mileage form*/
+
+	/*trim button*/
+	.xb-button-trim{
+		.item-label{
+			padding-right: 0px !important;
+			&:before{
+				line-height: 19px;
+				margin-left: 7px !important;
+				margin-right: 0px !important;
+			}
+		}
+	}
+	/*eo. trim button*/
+	/*mileage slider*/
+	.xb-slider{
+		border-top: 1px solid $secondary-color !important;
+		border-bottom: 1px solid $secondary-color !important;
+		.xb-arrow-left:before, .xb-arrow-right:before{
+			font-size: 1em !important;
+			margin-left: 0px !important;
+		}
+		&-number{
+			span{
+				font-family: $primary-font-family !important;
+				font-size: $page-titles !important;
+				color: $primary-text-color !important;
+				font-weight: $bold !important;
+			}
+		}
+	}
+	/*eo. mileage slider*/
+	/*service package*/
+	.xb-service-package{
+		&-head{
+			background-color: $secondary-color !important;
+			background-image: none !important;
+			.x-inner{
+				background-image: none !important;
+				&:before{
+					content: $tool;
+					font-family: $icon-family;
+					color: $price-bg-color;
+					font-size: 1.5em;
+					margin-left: 240px;
+					line-height: 24px;
+					position: absolute;
+				}
+			}
+			.xb-paragraph .x-innerhtml {
+				color: $secondary-text-color !important;
+				font-size: $box-header;
+				font-family: $primary-font-family;
+				margin-top: 5px;
+			}
+			.xb-paragraph-bold .x-innerhtml {
+				color: $secondary-text-color !important;
+				font-size: $page-header;
+				font-family: $primary-font-family;
+				font-weight: $bold;
+			}	
+		}
+		&-body{
+			.icon{
+				background-color: $secondary-color;
+			}
+			.xb-label{
+				font-size: $large-text !important;
+			}
+		}
+		
+		.xb-navigation-step{
+				@include border-radius($medium-radius); 
+				background-color: $tertiary-gradient-start !important; 
+						  		  @include filter-gradient($tertiary-gradient-start, $tertiary-gradient-stop, vertical);
+						          $experimental-support-for-svg: true;
+						          @include background-image(linear-gradient(top,  $tertiary-gradient-start 1%, $tertiary-gradient-stop 100%));
+			.x-innerhtml{
+				font-family: $primary-font-family;
+				color: $secondary-text-color !important;
+				font-size: $small-text;
+				line-height: 34px !important;
+				text-transform: $text-transform-up;
+				text-align:center;
+	    		text-decoration:none;
+			} 
+		}
+		&-detail{
+			.xb-label{
+				font-size: $small-text !important;
+				color: $secondary-text-color;
+			}
+		}
+		&.selected{
+			border-color: $primary-color;
+			@include border-radius($box-radius);
+			.xb-service-package-head{
+				background-color: $primary-color !important;
+				background-image: none !important;
+				.x-inner{
+					&:before{
+						color: $dropdown-bg-color;
+					}
+				}
+			}
+			.xb-paragraph .x-innerhtml, .xb-paragraph-bold .x-innerhtml {
+				color: $primary-text-color !important;
+			}
+			.xb-service-package-detail{
+				background-color: $primary-color;
+				.xb-label,
+				.xb-arrow-down:before{
+					color: $primary-text-color;
+				}
+			}	
+			.icon{
+				background-color: $primary-color;
+			}
+		}		
+	}
+	/*individual service toggle for service and repairs*/
+	.xb-toggle{
+		.services-tab-individualServices{
+			@extend .xb-toggle-left;
+			background-image: none;
+			&.tab-selected{
+				background-color: $primary-color;
+				color: $primary-text-color;
+			}
+		}
+		.repairs-tab-individualServices{
+			@extend .xb-toggle-right;
+			background-image: none;
+			&.tab-selected{
+				background-color: $primary-color;
+				color: $primary-text-color;
+			}
+		}
+	}
+	/*eo. individual service toggle for service and repairs*/
+
+	/*individual service*/
+	.xb-service-individual{
+		.x-dataview-item, .additionalServiceItem{
+			border: 1px solid $secondary-color;
+			.xb-service-content{
+				.xb-service-price{
+					font-family: $primary-font-family !important;
+					font-weight: $bold;
+					font-size: $large-text !important;
+					color: $primary-text-color !important;
+				}
+			}
+			.xb-service-bottom{
+				background-color: $secondary-color;
+				.xb-label{
+					color: $secondary-text-color;
+					text-transform: $text-transform-up;
+				}
+			}
+			.service-icon, .serviceIcon{
+				background-color: $secondary-color;
+			}
+		
+			&.x-item-selected, &.serviceSelected{
+				border: 1px solid $primary-color;
+				.xb-service-bottom{
+					background-color:$primary-color;
+					background-image: none !important;
+					.xb-label{
+						color: $primary-text-color;
+					}
+				}
+				.service-icon{
+					background-color: $primary-color;
+				}
+			}
+		}
+	}
+	/*eo. individual service*/
+	/*advisor*/
+	.xb-advisor-head{
+		&-number{
+			color: $primary-text-color;
+		}
+		.xb-paragraph{
+			color: $secondary-color;
+			font-size: $tiny-text;
+		}
+	}
+	.xb-advisor-list.xb-button-primary{
+		.xb-advisor-checkmark:before{
+    		margin-left: -24px;
+    		margin-top: 6px;
+    		float: left;
+		}
+		.name{
+			line-height: 33px;
+			font-weight: $bold;
+
+		}
+	}
+	/*eo. advisor*/
+	/*transportation option*/
+	.transportationOption{
+		background-color: $selector-bg-color;
+		.title{
+			background-color: $secondary-color;
+			.x-innerhtml{
+				font-family: $primary-font-family;
+				font-weight: $bold;
+				font-size: $page-titles;
+				color: $secondary-text-color;
+			} 
+		}
+		.content{
+			color: $primary-text-color !important;
+			font-size: $small-text !important;
+			font-family: $primary-font-family !important;
+		}
+
+		&.x-item-selected{
+			background-color: $primary-color;
+			.title{
+				background-color: $primary-color;
+				background-image: none;
+				&:before{
+					content: $check-mark;
+					font-family: $icon-family;
+					font-size: 1em;
+					margin-left: 5px;
+					color: $primary-text-color;
+					float: right;
+					margin-right: 11px;
+		    		margin-top: -3px;
+				}
+				.x-innerhtml{
+					color: $primary-text-color;
+				} 
+			}
+		}
+	}
+	/*eo. transportation option*/
+	/*make appointment*/
+	.xb-appointment{
+		border-bottom: 1px solid $secondary-color;
+		.LTitleBlack{
+			font-family: $primary-font-family;
+			color: $primary-text-color;
+			font-size: $content-header;
+			font-weight: $bold;
+		}
+		.xb-label{
+			font-size: $small-text;
+		}
+		.xb-timelist-dock{
+			.xb-label-comment{
+				color: $secondary-text-color;	
+			}
+			.xb-arrow-down{
+				margin-left: 5px;
+    			line-height: 30px;
+    			&:before{
+    				font-size: 1em;
+				    line-height: 31px;
+				    margin-left: -1px;
+				    position: absolute;
+    			}
+			}
+		}
+		.expanded .xb-arrow-down{
+			margin-left: 5px;
+    		line-height: 30px;
+    		&:before{
+    			content: $arrow-up;
+    			font-size: 1em;
+				line-height: 31px;
+				margin-left: -1px;
+				position: absolute;
+			}
+		}
+		.xb-label{
+			text-align: right !important;
+		}
+		.show-more-component:before{
+			color: $primary-text-color;
+			margin-left: 125px;
+    		position: absolute;
+    		font-size: 1.3em;
+    		line-height: 23px;
+		}
+		.XSTitlePrimary, .MTitlePrimaryLt{
+			color: $primary-text-color !important;
+			font-size: $large-text;
+		}
+	}
+	.xb-timelist{
+		background-color: $secondary-color !important;
+		&-button{
+			background-color: $secondary-color !important;
+		}
+		.xb-timelist-time{
+			font-family: $primary-font-family;
+			font-size: $boarder-header;
+			color: $secondary-text-color;
+		}
+	
+		&.x-item-selected{
+			background-color: $primary-color !important;
+			.xb-timelist-button{
+				background-color: $primary-color !important;
+			}
+			.xb-timelist-time{
+				color: $primary-text-color !important;
+				background-image: none !important;
+				font-size: $boarder-header !important;
+				&:before{
+					content: $check-mark;
+					font-family: $icon-family;
+					font-size: 0.9em;
+					margin-left: 55px;
+					color: $primary-text-color;
+					position: absolute;
+				}
+			}
+		}
+	}
+	/*eo. make appointment*/
+	/*appointment time selector when selected*/
+	.xb-hour-toggle.first-selected{
+		.xb-label-comment, .xb-arrow-down:before{
+			color: $primary-text-color !important;
+		}
+	}
+	/*eo. appointment time selector*/
+
+	/*review */
+	&.xb-review{
+		/*review appointment*/
+		.xb-review-appointment{
+			border-top: 1px solid $secondary-color;
+		}
+		.xb-label.show-details, .xb-label.show-more-component{
+			background-image: none !important;
+			font-family: $secondary-font-family;
+			color: $primary-text-color;
+			font-size: $small-text;
+		}
+		.xb-label.show-more-component:before{
+				content: $arrow-up;
+				font-size: 1.1em;
+				color: $primary-text-color;
+				line-height: 24px;
+			    margin-left: 34px;
+			    position: absolute;
+			}
+		.xb-arrow-down{
+			&:before{
+				color: $primary-text-color;
+				line-height: 12px;
+				margin-left: 269px;
+				position: absolute;
+			}
+		}
+
+	}
+	/*review service*/
+	&.review-your-services .xb-arrow-down:before{
+		margin-left: 3px;
+		color: $primary-text-color;
+		line-height: 14px;
+		position: absolute;
+	}
+	.xb-navigation-step{
+		border: none;
+		@include border-radius($medium-radius); 
+		background-color: $tertiary-gradient-start !important; 
+	    @include filter-gradient($tertiary-gradient-start, $tertiary-gradient-stop, vertical);
+		$experimental-support-for-svg: true;
+		 @include background-image(linear-gradient(top,  $tertiary-gradient-start 1%, $tertiary-gradient-stop 100%));
+		.x-innerhtml, .x-button-label{
+			font-family: $secondary-font-family !important;
+			color: $secondary-text-color !important;
+			font-size: $content-header;
+			text-transform: $text-transform-cap;
+		} 
+	}
+
+	.xb-review-service{
+		border-top: 1px solid $secondary-color;
+		.xb-cart{
+			.cartItemWrap{
+				border-bottom:1px solid $secondary-color;
+			} 
+			.xb-cart-popup-total{
+				@include border-radius($large-radius); 
+				background-color: $tertiary-color;
+				&-name, &-price{
+					color: $secondary-text-color !important;
+					font-size: $list-header !important;
+				}
+			}
+		}
+	}
+}
+/*eo. xb-selector-step*/
+
+/*double arrow moveback button */
+.xb-button-moveback{
+	.xb-doublearrow-left{
+		background-image: none;
+		&:before{
+			content: $angle-double-left;
+			font-family: $icon-family;
+			color: $secondary-color;
+			font-size: 1.5em;
+			margin-left: 5px;
+			line-height: 24px;
+		}
+	}
+}
+/*eo. double arrow moveback button */
+
+.xb-button-movealong.x-button-forward{
+	@extend .xb-button-secondary;
+	@include border-radius($medium-radius);
+	box-shadow: none;
+	&.x-item-disabled{
+		background-color: $secondary-color !important; 
+		@include filter-gradient($secondary-color, $secondary-color, vertical);
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(top,  $secondary-color 1%, $secondary-color 100%));
+		
+	}
+	.x-button-label{
+		font-size: $boarder-header !important;
+		text-shadow: none ;
+		text-align: center;
+		text-transform: $text-transform-up;
+	}
+}
+
+/*text in form*/
+::-webkit-input-placeholder {
+   color: $secondary-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $secondary-color;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $secondary-color;  
+}
+
+:-ms-input-placeholder {  
+   color: $secondary-color;  
+}
+/*eo. text in form*/
+
+/*cart*/
+.xb-cart{
+	&-number{
+		background-color: transparent !important;
+		color: $primary-text-color;
+		font-family: $secondary-font-family;
+		font-size: $large-text;
+	}
+	&-icon{
+		background: $tertiary-gradient-start !important; /* Old browsers */
+		background: -moz-linear-gradient(top,  $tertiary-gradient-start 0%, $tertiary-gradient-stop 100%) !important; /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  $tertiary-gradient-start 0%,$tertiary-gradient-stop 100%) !important; /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  $tertiary-gradient-start 0%,$tertiary-gradient-stop 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$tertiary-gradient-start', endColorstr='$tertiary-gradient-stop',GradientType=0 ) !important; /* IE6-9 */
+		border: 0px solid $secondary-color;
+		&:before{
+			content: $shopping-cart;
+			font-family: $icon-family;
+			color: $secondary-text-color;
+			font-size: 1.3em;
+			margin-right: 8px;
+			line-height: 32px;
+		}
+	}
+	&.expanded .xb-cart-icon{
+		background-color: $primary-gradient-start !important;
+		background-image: none !important;
+	}
+	.xb-cart-popup{
+		background-color: $primary-gradient-start !important; 
+		@include filter-gradient($primary-gradient-start, $primary-gradient-stop, vertical);
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(top,  $primary-gradient-start 1%, $primary-gradient-stop 100%));
+		@include border-radius($medium-radius); 
+
+		&-image{
+			border: 1px solid $secondary-color;
+		}
+		&-description{
+			font-family: $primary-font-family !important;
+			font-size: $large-text !important;
+			color: $primary-text-color !important;
+			font-weight: $bold !important;
+		}
+		&-item-name, &-item-price{
+			font-family: $primary-font-family !important;
+			font-size: $large-text !important;
+			color: $primary-text-color !important;
+		}
+		&-total-name, &-total-price{
+			font-family: $primary-font-family !important;
+			font-size: $large-text !important;
+			color: $primary-text-color !important;
+			font-weight: $bold !important;
+		}
+		&-total-price{
+			font-size: $boarder-header !important;
+		}
+		&-close{
+			background-color: $cart-popup-bg-color !important;
+			@include border-bottom-right-radius($medium-radius);
+			@include border-bottom-left-radius($medium-radius);
+			.x-button-label{
+				font-family: $secondary-font-family !important;
+				font-size: $content-header !important;
+				color: $secondary-text-color !important;
+				text-transform: $text-transform-cap !important;
+			}
+			.icon{
+				@extend .xb-close-icon;
+				background-image: none;
+			}
+		}
+	}
+}
+/*eo. cart*/
+/*search*/
+.xb-search{
+	&-icon{
+		background: $tertiary-gradient-start !important; /* Old browsers */
+		background: -moz-linear-gradient(top,  $tertiary-gradient-start 0%, $tertiary-gradient-stop 100%) !important; /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  $tertiary-gradient-start 0%,$tertiary-gradient-stop 100%) !important; /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  $tertiary-gradient-start 0%,$tertiary-gradient-stop 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$tertiary-gradient-start', endColorstr='$tertiary-gradient-stop',GradientType=0 ) !important; /* IE6-9 */
+		border: 0px solid $secondary-color;
+		&:before{
+			content: $search;
+			font-family: $icon-family;
+			color: $secondary-text-color;
+			font-size: 1em;
+			margin-left: 6px;
+			line-height: 30px;
+		}
+	}
+	&.expanded .xb-search-icon{
+		background-color: $primary-gradient-start !important;
+		background-image: none !important;
+	}
+	&-form{
+ 		background-color: $primary-gradient-start !important; 
+		@include filter-gradient($primary-gradient-start, $primary-gradient-stop, vertical);
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(top,  $primary-gradient-start 1%, $primary-gradient-stop 100%));
+ 		@include border-top-right-radius($medium-radius);
+		@include border-top-left-radius($medium-radius);
+ 		.xb-search-button{
+ 			@include border-radius($medium-radius);
+ 			background-color: $secondary-color;
+ 			.x-button-label{
+ 				color: $primary-text-color;
+				font-family: $secondary-font-family;
+				font-size: $regular-title;
+				text-transform: $text-transform-up;
+				text-align:center;
+	    		text-decoration:none;
+ 			}
+ 		}
+ 		.x-clear-icon{
+ 			@extend .xb-close-icon;
+ 			left: 127px;
+    		top: 24px;
+ 		} 
+	}
+	&-close{
+		background-color: $cart-popup-bg-color !important;
+		@include border-bottom-right-radius($medium-radius);
+		@include border-bottom-left-radius($medium-radius);
+
+		&-button{
+			.icon{
+				background-image: none !important;
+			}
+			.xb-close-icon{
+			    margin-top: -19px;
+			    margin-left: 51px;
+			    position: absolute;
+			    left: 37px;
+			    &:before{
+			    	margin-left: 0px;
+    				line-height: 24px;
+    				position: relative;
+    				left: -4px;
+			    }
+			}
+			.xb-label{
+				color: $secondary-text-color;
+			}
+		}
+	}
+}
+/*eo. search*/
+
+/*calendar*/
+.xb-calendar{
+	background-color: $calendar-bg-color;
+	&-inner{
+		background-color: $calendar-bg-color !important;
+	}
+	&-hour{
+		background-color: $secondary-color !important;
+	}
+	&-separator{
+		background-color: $primary-color !important;
+	}
+	.xb-arrow-right:before, .xb-arrow-left:before{
+		font-size: 1.1em;
+		line-height: 29px;
+	}
+	.xb-paragraph, .xb-label-comment{
+		font-size: $tiny-text;
+		color: $secondary-color;
+	}
+}
+/*eo. calendar*/
+/*disclaimer in review service*/
+.xb-disclaimer{
+	padding: 0px !important;
+
+	&.xb-arrow-down:before{
+		color: $primary-text-color;
+		line-height: 16px;
+    	float: right;
+    	margin-right:-5px;
+    	font-size: 1em;
+    	margin-left: 3px;
+	}
+	&.expanded{
+		border-top: 1px solid $secondary-color;
+		&.xb-arrow-down:before{
+			content:$arrow-up;
+		}
+	}
+	.xb-label{
+		text-align: right;
+		line-height: 20px;
+
+	}
+}
+/*eo. disclaimer in review service*/
+.xb-contact-form{
+	background-color: $primary-color !important;
+	border: 1px solid $primary-color;
+	@include border-radius($large-radius);
+	box-shadow: none; 
+	background-image: none !important;
+	.x-innerhtml{
+		font-family: $primary-font-family !important;
+		color: $primary-text-color !important;
+		font-weight: $bold;
+		font-size: $boarder-header;
+	} 
+	.x-form-label span{
+		ont-family: $primary-font-family !important;
+		font-size: $small-text;
+		color: $primary-text-color;
+	}
+	.x-clear-icon{
+		@extend .xb-close-icon;
+		top: 27px;
+		:before{
+			line-height:23px;
+		}
+	}
+}
+
+.inputTextNormal .x-input-el:checked + .x-field-mask:after{
+	color: $primary-gradient-start !important;
+}
+
+/*confirmation*/
+.xb-confirm{
+	box-shadow: none;
+	&-head{
+		background-color: $primary-color !important;
+		font-size: $content-header;
+		color: $primary-text-color !important;
+		text-transform: $text-transform-up !important;
+	}
+	&-time{
+		color: $in-line-link;
+		font-size: $large-text;
+	}
+	.xb-label-comment{
+		color: $secondary-color;
+	}
+	.xb-paragraph{
+		font-size: $large-text;
+		color: $primary-text-color;
+	}
+	.xb-confirm-code{
+		color: $in-line-link;
+		font-family: $primary-font-family;
+	}
+	.xb-button-secondary{
+		border: 0px !important;
+	}
+}
+
+.xb-map-dealer{
+	font-size: $large-text;
+	color: $primary-text-color;
+	font-family: $primary-font-family;
+	font-weight: $bold;
+}
+
+.directions.xb-button-secondary{
+	border: 0px !important;
+}
+/*eo. confirmation*/
+/*register*/
+.xb-register{
+	background-color: $selector-bg-color;
+	
+	.xb-paragraph{
+		font-weight: $bold;
+		font-size: $page-titles;
+	}
+	&-title{
+		border-radius: 0px !important;
+		@include border-radius($no-radius);
+		background-color: $secondary-color;
+		background-image: none !important;
+		.xb-paragraph-bold, .x-innerhtml{
+			font-family: $primary-font-family; 
+			color: $secondary-text-color !important;
+			font-weight: $bold !important;
+			text-shadow: none !important;
+		}	
+	}
+	.xb-button-movealong{
+		border: 0px !important;
+		.x-button-label{
+			line-height: 31px;
+			margin-left: -3px;
+		}
+	}
+	.xb-form{
+		.x-form-label span{
+			font-family: $primary-font-family !important;
+			color: $primary-text-color !important;
+			font-size: $content-header;
+		}
+		.x-clear-icon{
+			@extend .xb-close-icon;
+			margin-top: -13px !important;
+		}
+		.x-form-field{
+			border-color: $secondary-color;
+			@include border-radius($no-radius);
+			color: $primary-text-color !important;
+		}
+	}
+}
+/*eo. register*/
+
+/*box*/
+.xb-box-head .x-innerhtml, .xb-box-head{
+	font-family: $primary-font-family;
+	font-size: $list-header;
+	color: $primary-text-color;
+	font-weight: $bold;
+}
+.xb-box{
+	box-shadow: none !important;
+	background-color: $tab-selected-color;
+	border: 0px;
+	background-image: none !important;
+	&-head .x-innerhtml{
+		font-family: $primary-font-family;
+		font-size: $list-header;
+		color: $primary-text-color;
+		font-weight: $bold;
+	}
+	&-step .x-innerhtml{
+		font-family: $primary-font-family !important;
+		color: $primary-text-color !important;
+		font-size: $page-header !important;
+		font-weight: $bold;
+	}
+	&-image{
+		border-color: $secondary-color;
+	}
+	.xb-button-secondary{
+		border: 0px;
+		margin-left: 3px;
+		span{
+			text-transform: $text-transform-cap;
+		}
+	}
+	.xb-paragraph{
+		font-size: $large-text;
+		font-weight: $bold;
+	}
+	&-content{
+		font-size: $large-text;
+		font-family: $primary-font-family;
+	}
+	.x-form-fieldset-title .x-innerhtml{
+		font-family: $primary-font-family;
+		color: $primary-text-color;
+		font-size: $large-text;
+
+	}
+	.x-form-fieldset-instructions{
+		font-family: $primary-font-family !important;
+		font-size: $small-text !important;
+		color: $primary-text-color !important;
+	}
+
+	&-form{
+		background-color: $selector-bg-color;
+		.x-form-label span{
+			color: $primary-text-color !important;
+			font-family: $primary-font-family !important;
+		}
+		.x-form-field{
+			border: 1px solid $secondary-color !important;
+			color: $primary-text-color !important;
+		}
+		.x-clear-icon{
+			@extend .xb-close-icon;
+			margin-top: -13px;
+		}
+	}
+	&.xb-login-error, .xb-lostpassword{
+		.x-form-fieldset-title .x-innerhtml{
+			font-family: $primary-font-family;
+			font-size: $list-header;
+			color: $primary-text-color;
+			font-weight: $bold;
+
+		}
+		.x-clear-icon:before{
+			font-size: 1.4em;
+			margin-left: 4px;
+		}
+	}
+	&-link{
+		text-decoration: none !important;
+		.x-innerhtml, &{
+			color: $in-line-link;
+			font-size: $large-text;
+			font-weight: $bold;
+		}
+	} 
+	&-radio{
+		border: 0px;
+		background-image: none;
+
+	}		
+}
+
+.xb-triangle{
+	border-top-color: $secondary-gradient-middle;
+}
+.xb-step-form{
+	background-color: $secondary-gradient-start !important; 
+		@include filter-gradient($secondary-gradient-start, $secondary-gradient-middle, vertical);
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(top,  $secondary-gradient-start 1%, $secondary-gradient-middle 100%));
+		@include border-radius($medium-radius); 
+}
+
+.back-step-button.xb-button-stepback{
+	height: 40px !important;
+	.x-button-label{
+		font-size: $boarder-header !important;
+		text-align: center;
+		margin-left: -12px !important;
+		text-transform: $text-transform-up;
+	}
+}
+
+.xb-button-movealong{
+	&.btn-cancel{
+		border: 0px !important;
+		.x-button-label{
+			font-size:$list-header !important;
+		}
+	}
+	&.x-item-disabled{
+		background-color: $secondary-gradient-middle !important;
+		.x-button-label{
+			color: $secondary-text-color !important;
+		}
+	}
+}
+
+.btn-register-position.xb-button-movealong{
+	border: 0px;
+	.x-button-label{
+	  font-size: 18px;
+	  padding-left: 6px;
+	}
+}
+
+
+.x-input-el:checked + .x-field-mask::after{
+  color: $in-line-link !important;
+}
+
+.xb-paragraph-important{
+	font-family: $primary-font-family !important;
+	font-size: $content-header !important;
+	color: $in-line-link;
+}
+
+
+
+/*------------------------------------------Desktop-------------------------------------------------*/
+.xb-header-page .xb-cp-dealer-name{
+	font-size: $page-large-header;
+	color: $primary-text-color !important;
+	font-family: $secondary-font-family !important;
+}
+
+.xb-schedule{
+	background-color: $selector-bg-color;
+	&-section{
+		background: none !important;
+		.xb-schedule-tab{
+				background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 69%, rgba(255,255,255,0.92) 73%, rgba(255,255,255,0.8) 77%, rgba(255,255,255,0.37) 87%, rgba(255,255,255,0.13) 93%, rgba(255,255,255,0.06) 95%, rgba(255,255,255,0) 98%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+		        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 69%,rgba(255,255,255,0.92) 73%,rgba(255,255,255,0.8) 77%,rgba(255,255,255,0.37) 87%,rgba(255,255,255,0.13) 93%,rgba(255,255,255,0.06) 95%,rgba(255,255,255,0) 98%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		        background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 69%,rgba(255,255,255,0.92) 73%,rgba(255,255,255,0.8) 77%,rgba(255,255,255,0.37) 87%,rgba(255,255,255,0.13) 93%,rgba(255,255,255,0.06) 95%,rgba(255,255,255,0) 98%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+				@include border-top-left-radius($large-radius);
+				@include border-top-left-radius($large-radius);
+				height: 120px !important;
+				h1{
+					font-size: $page-header !important;
+					color: $cart-popup-bg-color !important;
+					font-family: $secondary-font-family !important;
+				}
+				p{
+					color: $primary-text-color !important;
+					font-family: $primary-font-family !important;
+				}
+			
+		}
+
+		&.selected{
+			.xb-schedule-tab{
+				h1{
+					color: $primary-text-color !important;
+				}
+			}
+		}
+	}
+
+	.selected .xt-degradate-panel, .selected .xb-schedule-tab, .xt-first-warning-msg, .xb-form-panel{
+		background-color: $selector-bg-color !important;
+		background-image: none !important;
+	}
+
+	.xb-form-panel{
+		label{
+			font-family: $primary-font-family;
+			color: $primary-text-color;
+			font-size: 13px !important;
+		}
+		input{
+			height: 28px !important;
+		}
+		.xb-label-comment{
+			color: $primary-text-color;
+			font-family: $primary-font-family;
+		}
+		&-dropdown, .x-form-trigger-wrap{
+			.x-form-trigger-input-cell input, .x-trigger-cell .x-form-trigger, .x-form-trigger-wrap, .x-form-arrow-trigger, .x-form-trigger-wrap input{
+				background: -moz-linear-gradient(top, rgba(218, 218, 218, 0.87) 0%, rgba(218, 218, 218, 0.87) 2%, gainsboro 3%, #e3e3e3 4%, rgba(234, 234, 234, 0.97) 5%, rgba(241, 241, 241, 0.94) 6%, rgba(247, 247, 247, 0.94) 7%, rgba(247, 247, 247, 0.94) 8%, rgba(253, 253, 253, 0.94) 10%, rgba(253, 253, 253, 0.94) 13%, rgba(255, 255, 255, 0.94) 32%, rgba(252, 252, 252, 0.94) 33%, rgba(252, 252, 252, 0.94) 35%, rgba(249, 249, 249, 0.94) 36%, rgba(247, 247, 247, 0.94) 44%, rgba(243, 243, 243, 0.94) 46%, rgba(239, 239, 239, 0.94) 54%, rgba(235, 235, 235, 0.94) 56%, rgba(233, 233, 233, 0.94) 64%, rgba(230, 230, 230, 0.94) 65%, rgba(230, 230, 230, 0.94) 67%, rgba(227, 227, 227, 0.94) 68%, rgba(226, 226, 226, 0.94) 87%, rgba(217, 217, 217, 0.94) 90%, rgba(210, 210, 210, 0.94) 94%, rgba(200, 200, 200, 0.99) 95%, rgba(189, 189, 189, 0.99) 96%, rgba(185, 185, 185, 0.98) 97%, rgba(183, 183, 183, 0.87) 98%, rgba(183, 183, 183, 0.87) 100%) !important;
+                background: -webkit-linear-gradient(top, rgba(218, 218, 218, 0.87) 0%, rgba(218, 218, 218, 0.87) 2%, gainsboro 3%, #e3e3e3 4%, rgba(234, 234, 234, 0.97) 5%, rgba(241, 241, 241, 0.94) 6%, rgba(247, 247, 247, 0.94) 7%, rgba(247, 247, 247, 0.94) 8%, rgba(253, 253, 253, 0.94) 10%, rgba(253, 253, 253, 0.94) 13%, rgba(255, 255, 255, 0.94) 32%, rgba(252, 252, 252, 0.94) 33%, rgba(252, 252, 252, 0.94) 35%, rgba(249, 249, 249, 0.94) 36%, rgba(247, 247, 247, 0.94) 44%, rgba(243, 243, 243, 0.94) 46%, rgba(239, 239, 239, 0.94) 54%, rgba(235, 235, 235, 0.94) 56%, rgba(233, 233, 233, 0.94) 64%, rgba(230, 230, 230, 0.94) 65%, rgba(230, 230, 230, 0.94) 67%, rgba(227, 227, 227, 0.94) 68%, rgba(226, 226, 226, 0.94) 87%, rgba(217, 217, 217, 0.94) 90%, rgba(210, 210, 210, 0.94) 94%, rgba(200, 200, 200, 0.99) 95%, rgba(189, 189, 189, 0.99) 96%, rgba(185, 185, 185, 0.98) 97%, rgba(183, 183, 183, 0.87) 98%, rgba(183, 183, 183, 0.87) 100%) !important;
+                background: linear-gradient(to bottom, rgba(218, 218, 218, 0.87) 0%, rgba(218, 218, 218, 0.87) 2%, #dcdcdc 3%, #e3e3e3 4%, rgba(234, 234, 234, 0.97) 5%, rgba(241, 241, 241, 0.94) 6%, rgba(247, 247, 247, 0.94) 7%, rgba(247, 247, 247, 0.94) 8%, rgba(253, 253, 253, 0.94) 10%, rgba(253, 253, 253, 0.94) 13%, rgba(255, 255, 255, 0.94) 32%, rgba(252, 252, 252, 0.94) 33%, rgba(252, 252, 252, 0.94) 35%, rgba(249, 249, 249, 0.94) 36%, rgba(247, 247, 247, 0.94) 44%, rgba(243, 243, 243, 0.94) 46%, rgba(239, 239, 239, 0.94) 54%, rgba(235, 235, 235, 0.94) 56%, rgba(233, 233, 233, 0.94) 64%, rgba(230, 230, 230, 0.94) 65%, rgba(230, 230, 230, 0.94) 67%, rgba(227, 227, 227, 0.94) 68%, rgba(226, 226, 226, 0.94) 87%, rgba(217, 217, 217, 0.94) 90%, rgba(210, 210, 210, 0.94) 94%, rgba(200, 200, 200, 0.99) 95%, rgba(189, 189, 189, 0.99) 96%, rgba(185, 185, 185, 0.98) 97%, rgba(183, 183, 183, 0.87) 98%, rgba(183, 183, 183, 0.87) 100%) !important;
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedadada', endColorstr='#deb7b7b7',GradientType=0 );
+                height: 26px !important;
+                color: $primary-text-color;
+    			font-weight: $normal;
+			}
+			.x-form-arrow-trigger{
+				@extend .xb-arrow-down;
+				&:before{
+					color: $secondary-color !important;
+					font-size: 1.4em;
+				    line-height: 23px;
+				    margin-left: 5px;
+				}
+			}
+		}
+	}
+
+	&.xt-schedule-formContent .selected .xb-button-panel{
+		background: $secondary-gradient-middle; /* Old browsers */
+		background: -moz-linear-gradient(top,  $secondary-gradient-middle 0%, $secondary-gradient-middle2 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cbcbcb), color-stop(100%,$secondary-gradient-middle2)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  $secondary-gradient-middle 0%,$secondary-gradient-middle2 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  $secondary-gradient-middle 0%,$secondary-gradient-middle2 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  $secondary-gradient-middle 0%,$secondary-gradient-middle2 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  $secondary-gradient-middle 0%,$secondary-gradient-middle2 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary-gradient-middle', endColorstr='$secondary-gradient-middle2',GradientType=0 ); /* IE6-9 */
+
+		&-arrow{
+			border-top-color: $secondary-text-color !important;
+		}
+		#logInBtn, #findMeBtn, #getStartedBtn, #inHurryButtonBtn{
+			@extend .xb-button-movealong;
+			span{
+				font-size: $regular-title !important;
+				line-height: 38px !important;
+				text-shadow: none;
+				padding-left: 40px !important;
+				text-align: center;
+			}
+		}
+	}
+	.xb-link-panel, .xb-footer-panel{
+		background-color: $secondary-gradient-middle2 !important;
+		label{
+			color: $primary-text-color !important;
+			font-family: $primary-font-family !important;
+		}
+		#iLostMyUsernameLink, #iLostMyPasswordLink{
+			font-family: $primary-font-family !important;
+			color: $in-line-link !important;
+			font-size: $small-text;
+			font-weight: $bold;
+			text-decoration: none;
+		}
+	}
+}
+
+.xb-dropdown-list, .x-boundlist-item{
+	background-image: none !important;
+	background-color: $selector-bg-color;
+	color: $primary-text-color;
+	border-color: $dropdown-bg-color !important;
+	&.x-boundlist-selected, &.x-boundlist-item-over, &.x-boundlist-selected.x-boundlist-item-over{
+		background-color: $tertiary-color;
+		color: $secondary-text-color;
+	}
+	.x-boundlist-upArrow, .x-boundlist-downArrow{
+		background-color: $secondary-color;
+		background-image: none !important;
+	}
+}
+
+.xb-cart{
+	.x-toolbarcartitem-qty{
+		font-family: $primary-font-family;
+		color: $primary-text-color;
+		font-size: $boarder-header; 
+		margin-left: 5px;
+  		line-height: 33px;
+	}
+	.x-toolbarcartitem-icon{
+		background-image: none !important;
+		&:before{
+			content: $shopping-cart;
+			font-family: $icon-family;
+			color: $primary-text-color !important;
+			font-size: 1.7em;
+			line-height: 29px !important;
+		}
+	}
+	.x-toolbarcartitem-price{
+		font-family: $primary-font-family !important;
+		color: $primary-text-color !important;
+	}
+}
+.xb-cart-popup{
+	background-color: $tertiary-color;
+	.xb-toolbarcartitem-qty{
+		font-family: $primary-font-family;
+		color: $secondary-text-color;
+		font-size: $boarder-header; 
+	}
+	.xb-toolbarcartitem-separator{
+		border-color: $secondary-color;
+	}
+	.xb-toolbarcartitem-price{
+		color: $secondary-text-color;
+		font-family: $primary-font-family;
+	}
+	.xb-toolbarcartitem-arrow-trigger{
+		background-image: none;
+		&:before{
+			content: $drop-down;
+			font-family: $icon-family;
+			font-size: 1em;
+			line-height:29px;
+			color: $secondary-text-color;
+		}
+	}
+	.xb-toolbarcartitem-icon{
+		background-image: none !important;
+		&:before{
+			content: $shopping-cart;
+			font-family: $icon-family;
+			color: $secondary-text-color !important;
+			font-size: 1.3em;
+			line-height: 29px !important;
+		}
+	}
+
+	.x-toolbarcartitem-qty, .x-toolbarcartitem-icon:before, .x-toolbarcartitem-price, .x-toolbarcartitem-separator, x-shoppingcart-span, .x-toolbarcartitem-arrow-trigger:before{
+		color: $secondary-text-color !important;
+	}
+	.x-shoppingcart-span{
+		font-family: $primary-font-family !important;
+	}
+	&-content{
+		border-color: $dropdown-bg-color;
+		.xb-label-comment{
+			font-size: $large-text !important;
+		}
+		.xb-close-icon{
+			background-color: $secondary-color;
+			width: 16px;
+			height: 16px;
+			&:before{
+				font-size: $small-text;
+  				margin-left: 3px;
+  				line-height: 16px;
+			}
+		}
+		.xb-cart-popup-image{
+			border-color: $secondary-color;
+		}
+		.xb-cart-popup-description{
+			color: $primary-text-color;
+			font-family: $primary-font-family;
+			font-size: $large-text;
+		}
+		.xb-label-comment{
+			font-family: $primary-font-family !important;
+		}
+		&-separator{
+			border-color: $dropdown-bg-color;
+		}
+		&-list{
+			.xb-cart-popup-content-image{
+				background-color: $primary-color !important;
+			}
+			.xb-cart-popup-content-price{
+				.xb-label-comment{
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+	&-footer{
+		background-color: $tertiary-color;
+		span{
+			color: $secondary-text-color;
+			font-family: $primary-font-family;
+			font-size: $list-header;
+			font-weight: $bold;
+		}
+	}
+}
+/*cart popup bottom radius*/
+.x-shoppingcart-detail{
+  		@include border-bottom-left-radius($large-radius);
+		@include border-bottom-right-radius($large-radius);
+}
+/*cart popup bottom radius*/
+
+.x-progressstep-left-side, .x-progressstep-right-side, .x-progressstep-inner{
+  background: none !important;
+}
+
+.xb-wizard-progress{
+	&-step{
+		width: 224px;
+    	height: 37px;
+    	margin-top: 5px !important;
+
+    	.xb-stepnumber{
+    		line-height: 38px;
+    		margin-top: 0px;
+    	}
+    	.xb-stepname{
+    		font-size: $large-text !important;
+    		line-height: 38px;
+    	}
+    	.x-progressstep-icon{
+    		margin-top: -6px;
+    	}
+	}
+	.x-progressstep-icon{
+		background-image: none !important;
+	}
+}
+
+.xb-wizard-progress .x-progressstep-current{
+	.xb-wizard-progress-step{
+		width: 205px !important;
+		.xb-stepnumber{
+    		line-height: 38px;
+    		margin-top: 0px;
+    		font-size: $page-header;
+    	}
+    	.xb-stepname{
+    		font-size: $large-text !important;
+    		line-height: 38px;
+    		font-size: $content-header;
+    	}
+    	.x-progressstep-icon{
+    		margin-top: -6px;
+    	}
+    	&:before{
+    		height: 26px;
+    		width: 26px;
+    		right: -26px;
+    		left: auto;
+    		@include border-radius($small-radius); 
+    		background-color: $primary-gradient-start !important; 
+			@include filter-gradient($primary-gradient-start, $primary-gradient-stop, vertical);
+			$experimental-support-for-svg: true;
+			@include background-image(linear-gradient(top,  $primary-gradient-start 1%, $primary-gradient-stop 100%));
+			border: 0px !important;
+			top: 0px;
+    	}
+    	&:after{
+    		border: 0px !important;
+    	}
+    	&:hover{
+    		background-color: $primary-gradient-start !important; 
+			@include filter-gradient($primary-gradient-start, $primary-gradient-stop, vertical);
+			$experimental-support-for-svg: true;
+			@include background-image(linear-gradient(top,  $primary-gradient-start 1%, $primary-gradient-stop 100%));
+    	}
+	}
+	
+}
+
+.step1:before{
+	content: $vehicle;
+	font-family: $icon-family;
+	font-size: 2em;
+  	margin-left: 12px;
+   	line-height: 48px;
+	color: $secondary-text-color;
+}
+.step2:before{
+	@extend .step1:before;
+	content: $service;
+}
+.step3:before,
+.xb-calendar-icon:before{
+	@extend .step1:before;
+	content: $appointment;
+}
+.step4:before{
+	@extend .step1:before;
+	content: $check-mark;
+}
+
+.xb-wrapper{
+	.xt-tooltip, .xt-tooltip-gray{
+		background-color: $dropdown-bg-color;
+		div span, div{
+			color: $primary-text-color;
+		}
+	}
+	&.navigation-wrapper.help-tip-normal {
+    width: 228px !important;
+	}
+}
+
+.xb-panel{
+	&-massage{
+		background-color: $secondary-color !important;
+		@include border-top-left-radius($box-radius);
+		@include border-top-right-radius($box-radius);
+		font-size: $large-text !important;
+		color: $secondary-text-color !important;
+	}
+}
+
+.xb-selector-step{
+	background-color: $selector-bg-color;
+	.x-header-text{
+		font-size: $regular-title;
+		font-family: $secondary-font-family !important;
+		color: $primary-text-color !important;
+	}
+
+}
+
+.accordionPanel{
+	&.xb-selector-step{
+		border: 0px !important;
+	}
+	.xb-selector-model{
+		.xb-model{
+			&-button{
+				border: 0px !important;
+				.item{
+					margin-bottom: 9px !important;
+					&.item-selected{
+						.xb-model-name{
+							background-color: transparent;
+							color: $primary-color;
+						}
+					}
+				}
+			}
+			&-img{
+				height: 85px !important;
+			}
+			&-name{
+				font-weight: $bold !important;
+			}
+		}
+	}
+	.btn-previous{
+		@extend .xb-arrow-left;
+	}
+	.btn-next{
+		@extend .xb-arrow-right;
+	}
+	.xb-panel-recommendservice{
+		.xb-arrow-right, .xb-arrow-left{
+			position: absolute !important;
+			&:before{
+				position: absolute !important;
+			}
+			span{
+				background-image: none !important;
+				font-family: $primary-font-family;
+				font-size: $content-header;
+				color: $primary-text-color;
+				line-height: 17px !important;
+			}
+		}
+		.xb-arrow-right:before{
+			margin-left: 195px !important;
+		}
+		.xb-paragraph-bold label{
+			font-family: $primary-font-family;
+			color: $primary-text-color;
+		}
+	}
+	.xb-panel-recommendpackage{
+		.item{
+			@include border-radius($medium-radius); 
+			border: 0px ;
+		
+			.xb-service-package-title{
+				.xb-paragraph{
+					color: $secondary-text-color !important;
+				}
+				&-icon{
+					background-image: none !important;
+					&:before{
+						content: $tool;
+						font-family: $icon-family;
+						color: $price-bg-color;
+						font-size: 2.7em;
+						line-height: 43px;
+					}
+				}
+			}
+			.xb-service-package-body{
+				background-color: $tab-selected-color;
+				color: $primary-text-color;
+				font-family: $primary-font-family !important;
+				.xb-package-final-price, .pkg-final-price{
+					color: $primary-text-color;
+					font-family: $primary-font-family;
+				}
+			}
+			.xb-service-package-detail{
+				.pkg-more-details, .pkg-remove{
+					font-family: $secondary-font-family !important;
+					color: $secondary-text-color;
+					box-shadow: none !important;
+				}
+				
+			}
+			&.item-over{
+				.xb-service-package-head, .xb-service-package-detail{
+					background-color: $tertiary-color !important;
+				}
+				.xb-package-border{
+					border: 3px solid $tertiary-color !important;
+				}
+			}
+			&.item-selected{
+				.xb-service-package-head, .xb-service-package-detail{
+					background-color: $primary-color !important;
+				}
+				.xb-package-border{
+					border: 3px solid $primary-color !important;
+				}
+				.xb-service-package-body .xb-model-check{
+					@extend .xb-model-check-icon;
+				}
+				.xb-service-package-title .xb-paragraph, .xb-service-package-detail, .xb-service-package-title-icon:before, .pkg-more-details, .pkg-remove{
+						color: $primary-text-color !important;
+				}
+			}
+			
+		}
+	}
+	&.xb-panel-last{
+		.x-header-text{
+			font-size: $list-header;
+			color: $primary-text-color !important;
+			font-family: $secondary-font-family !important;
+		}
+		.xt-tellusmore-text-area{
+			border: 1px solid $secondary-color !important;
+		}
+	}
+	&.xb-panel-appointment{
+		.x-header-text{
+			font-size: $list-header;
+			color: $primary-text-color !important;
+			font-family: $secondary-font-family !important;
+		}
+
+		.xb-advisor{
+			background-image: none;
+			background-color: $timeboard-bg-color;
+			@include border-radius($small-radius);
+			&-label{
+				label{
+					font-family: $primary-font-family !important;
+					font-size: $content-header;
+					color: $primary-text-color;
+					font-weight: $normal;
+					.choose-one{
+						font-family: $primary-font-family;
+						font-size: $small-text;
+						color: $secondary-color !important;
+					}
+				}
+				input{
+					font-family: $primary-font-family !important;
+					font-size: $content-header;
+					color: $primary-text-color;
+					font-weight: $normal;
+				}
+			}
+			.x-form-arrow-trigger{
+				background-image: none !important;
+				&:before{
+					@extend .xb-arrow-down;
+					color: $secondary-text-color !important;
+				}
+			}
+		}
+	}
+}
+
+.xb-panel-detail{
+	&-trim{
+		background-image: none !important;
+		background-color: $selector-bg-color;
+		.xb-paragraph{
+			font-weight: $bold;
+			font-size: $list-header;
+			color: $primary-text-color;
+			top: 10px !important;
+		}
+		.xb-label-comment{
+			color: $secondary-color;
+			font-size:$large-text;
+			top: 29px !important;
+		}
+		.xb-trim-list{
+			.item{
+				@extend .xb-button-primary;
+				background-image: none !important;
+				span{
+					font-weight: $bold !important;
+					background-image: none !important;
+					text-transform: $text-transform-up;
+				}
+				&.item-selected span{
+					padding-left: 10px !important;
+					&:before{
+						content: $check-mark;
+						font-family: $icon-family;
+						font-size: 1.2em;
+						color: $primary-text-color;
+						float: left;
+					}
+				}
+			}
+		}
+		.xb-panel-mileage{
+			label{
+				font-weight: $bold;
+				font-size: $list-header;
+				color: $primary-text-color;
+				font-family: $primary-font-family !important;
+			}
+			input{
+				margin-top: 5px;
+			}
+		}
+		.xb-panel-condition{
+			.item{
+				span{
+					line-height: 30px !important;
+					&:before{
+						margin-left: 12px;
+						line-height:26px;	
+					}
+				}
+			}
+		}
+	}
+}
+
+.xb-button-movealong, .xb-button-stepback{
+	.x-wizardbutton-text{
+		font-size: $list-header !important;
+		line-height: 42px !important;
+		text-shadow: none !important;
+		text-transform: $text-transform-up !important;
+		font-family: $secondary-font-family !important;
+	}
+}
+
+.xb-button-stepback{
+	.x-wizardbutton-text{
+		color: $secondary-text-color !important;
+	}
+}
+
+/*compare service popup*/
+.xb-compareservice{
+	.xb-list-title{
+		font-size: $page-titles !important;
+	}
+	.xb-popup-package-cell{
+		border-color: $compareservice-bg-color !important;
+		label{
+			color: $primary-text-color !important;
+			font-family: $primary-font-family !important;
+			font-size: $large-text !important;
+		}
+		.xb-dot{
+			margin-left: 36px !important;
+    		margin-top: 4px !important;
+		}
+	}
+	.xt-package-header-compare-services, .xt-package-footer-compare-services{
+		font-family: $primary-font-family !important;
+		background-color: $compareservice-bg-color !important;
+			label{
+				font-family: $primary-font-family !important;
+				color: $secondary-text-color !important;
+			}
+			.xb-button-secondary{
+				@include background-image(linear-gradient(top,  $primary-gradient-start 1%, $primary-gradient-stop 100%));
+				@include border-radius($small-radius);
+				span{
+					line-height: 16px !important;
+				}
+			}
+	}
+	.xt-package-footer-compare-services-active,
+	.xt-package-header-compare-services-active{
+		background-color: $primary-color !important;
+		color: $primary-text-color !important;
+		label{
+			color: $primary-text-color !important;
+			font-family: $primary-font-family !important;
+			font-weight: bold;
+		}
+		.xb-button-secondary{
+				@include background-image(linear-gradient(top,  $primary-gradient-start 1%, $primary-gradient-stop 100%));
+				@include border-radius($small-radius);
+				span{
+					line-height: 16px !important;
+				}
+			}
+	}
+	.xt-package-body-compare-services-active{
+		border-color: $primary-color !important;
+		label{
+			color: $primary-text-color !important;
+			font-family: $primary-font-family !important;
+		}
+	}
+	.image-package-floating-selected.xb-model-check{
+		@extend .xb-model-check-icon;
+		height:30px !important;
+		width: 33px !important;
+		&:before{
+			font-size: 1.7em !important;
+    		margin-left: 5px !important;
+    		line-height: 38px !important;
+    	}
+	}
+}
+/*only for web compare service*/
+.xb-compareservice-pc{
+	.xb-popup-package-cell{
+		.xb-dot{
+			margin-left: 22px !important;
+			margin-top: 6px !important;
+		}
+	}
+	.xt-package-body-compare-services-active{
+		.x-box-inner{
+			height: 20px !important;
+		}
+		.xb-dot{
+			margin-left: 22px !important;
+			margin-top: 6px !important;
+		}
+	}
+}
+
+.xb-individualservice{
+	.x-header-text{
+		font-family: $primary-font-family !important;
+		font-size: $list-header !important;
+		color: $primary-text-color !important;
+	}
+	&-search{
+		.x-form-item-body:before{
+			content: $search;
+			font-family: $icon-family;
+			color: $primary-text-color;
+		    font-size: 1.3em;
+    		margin-left: 224px !important;
+			line-height: 28px;
+			position: absolute;
+		}
+		&-input{
+			background-image: none !important;
+			border-color: $secondary-color;
+			margin-left: 15px;
+		}
+	}
+	.x-tab-bar .x-tab-bar-body{
+		background-image: none !important;
+		background-color: $tab-selected-color !important;
+		border-bottom: 1px solid $secondary-color !important;
+		.x-tab, .x-tab.x-over{
+			border: none !important;
+			box-shadow: none !important;
+			@extend .xb-button-primary;
+			background-color: $secondary-color !important;
+			background-image: none;
+			@include border-top-right-radius($small-radius);
+			@include border-top-left-radius($small-radius);
+			@include border-bottom-right-radius($no-radius);
+			@include border-bottom-left-radius($no-radius);
+			span{
+				color: $primary-text-color !important;
+				line-height: 33px !important;
+			}
+			&.x-active, &.x-active.x-over{
+				background-image: none !important;
+				background-color: $primary-color !important;
+				span{
+					font-weight: $bold;
+				}
+			}
+		}
+	}
+	.xb-selector-step, .x-panel{
+		border: none !important;
+		.item, .lastItem{
+  			width: 272px !important;
+  			height: 100px !important;
+  			.additionalServiceItem{
+  				border-color: $secondary-color !important;
+  			}
+  			.xb-service-content{
+  				.serviceIcon{
+  					background-color: $secondary-color !important;
+  				}
+  				h4{
+  					color: $primary-text-color;
+  					font-family: $primary-font-family;
+  					font-size: $small-text;
+  				}
+  			}
+  			.xb-service-price{
+  				font-family: $primary-font-family;
+  				color: $secondary-color;
+  			}
+  			.xb-service-bottom{
+  				background-color: $secondary-color;
+  				span{
+  					font-family: $secondary-font-family;
+  					color: $secondary-text-color;
+  				}
+  			}
+  			.serviceSelected{
+  				.additionalServiceItem{
+  					border-color: $primary-color !important;
+  				}
+  				.serviceIcon{
+  					background-color: $primary-color !important;
+  				}
+  				.xb-service-bottom{
+  					background-color: $primary-color !important;
+	  				span{
+	  					color: $primary-text-color;
+	  				}
+	  				.xb-model-check-icon{
+	  					background-color: transparent !important;
+	  					border: none !important;
+	  					&:before{
+	  						color: $primary-text-color !important;
+	  						font-size: 1em !important;
+						    margin-left: 5px !important;
+						    line-height: 19px !important;
+	  					}
+	  				}
+  				}
+  			}
+		}
+	}
+}
+
+/*individual service popup*/
+.xb-service-popup{
+	background-color: $selector-bg-color !important;
+	@include border-radius($large-radius);
+	&-icon{
+		background-color: $secondary-color !important;
+	}
+	h1{
+		font-family: $primary-font-family;
+		color: $primary-text-color;
+		font-family: $primary-font-family;
+	}
+	textarea{
+		color: $primary-text-color;
+		border: 1px solid $secondary-color;
+	}
+	&-price{
+		color: $primary-text-color;
+		font-family: $primary-font-family;
+	}
+}
+/*e.o. individual service popup*/
+
+.xb-advisor-list{
+	.x-boundlist-item{
+		background-color: $timeboard-bg-color;
+		&.x-boundlist-selected{
+			background-color: $primary-color !important;
+			.xb-model-checkicon{
+				@extend .xb-model-check-icon;
+				background-image: none !important;
+				width: 25px;
+				height: 25px;
+				top: 60px;
+				margin-left: 2px;
+					&:before{
+						font-size: 1.3em;
+    					margin-left: 0px;
+    					line-height: 26px;
+					}
+			}
+		}
+	}
+}
+
+.xb-transportation{
+	background-image: none;
+	background-color: $timeboard-bg-color !important;
+	box-shadow: none;
+	border: none !important;
+	@include border-radius($large-radius);
+	.choose-one{
+		font-family: $primary-font-family !important;
+		font-size: $small-text;
+		color: $secondary-color;
+	}
+	.item{
+		@extend .xb-button-primary;
+		box-shadow: none !important;
+		background-image: none !important;
+		border: none !important;
+		span{
+			background-image: none !important;
+			font-family: $secondary-font-family;
+			top: -15px !important;
+			padding-left: 0px !important;
+		}
+		&.item-selected{
+			span{
+				position: relative !important;
+				top: -15px !important;
+				&:before{
+					@extend .step4:before;
+					font-size: 1em !important;
+					color: $primary-text-color !important;
+					margin-left: 5px !important;
+				}
+			}
+			
+		}
+	}
+}
+
+.xb-transportation-wrap{
+	background-color: $selector-bg-color;
+	@include border-bottom-right-radius($medium-radius);
+	@include border-bottom-left-radius($medium-radius);
+	h2, .header{
+		font-family: $primary-font-family;
+		color: $primary-text-color;
+		font-size: $page-titles !important;
+		font-weight: $bold !important;
+		text-transform: $text-transform-cap !important;
+	}
+	p, li{
+		font-family: $primary-font-family !important;
+		font-size: $content-header;
+		color: $primary-text-color !important;
+	}
+	.basicButton{
+		@extend .xb-button-secondary;
+		border: none !important;
+		@include border-radius($small-radius);
+
+	}
+	.txt-resaltcolor.xb-label-comment{
+		text-transform: $text-transform-up !important; 
+		color: $primary-text-color !important;
+
+	}
+	.xb-box{
+		background-color: $timeboard-bg-color !important;
+		@include border-radius($large-radius);
+		.xb-paragraph, .xb-box-link{
+			font-size: $content-header !important;
+			color: $primary-text-color;
+			text-transform: $text-transform-up !important;
+		}
+		.xb-box-link{
+			text-decoration: underline !important;
+		}
+	}
+	.x-table-plain{
+		background-color: $timeboard-bg-color !important;
+	}
+}
+
+.xb-table-appointment{
+	&-head{
+		.xb-arrow-left, .xb-arrow-right{
+			&:before{
+				position: absolute;
+			}
+		}
+		.xb-arrow-right:before{
+			margin-left: 75px;
+		}
+		span{
+			background-image: none !important;
+			&.x-btn-inner{
+				font-family: $primary-font-family;
+				font-size: $small-text;
+				color: $primary-text-color;
+				line-height: 17px !important;
+			}
+		}
+		.x-dateslider-calendar-icon{
+			background-image: none !important;
+			&:before{
+				@extend .xb-calendar-icon:before;
+				color: $secondary-color !important;
+				font-size: 1.5em !important;
+	    		line-height: 31px;
+			}
+		}
+		.x-dateslider-labelText,
+		.x-dateslider-fromText, .x-dateslider-separateSymbol, .x-dateslider-toText{
+			font-family: $primary-font-family;
+			font-size: $small-text;
+			color: $primary-text-color;
+		}
+		.x-dateslider-fromText, .x-dateslider-separateSymbol, .x-dateslider-toText{
+			font-weight: $bold !important;
+		}
+	}
+	&-timebar-head{
+		th div{
+			.weekday, .date{
+				font-family: $primary-font-family;
+				color: $primary-text-color;
+				font-size: $large-text !important;
+			}
+		}
+		.closed{
+			.weekday, .date{
+				color: $timeboard-bg-color !important;
+			}
+		}
+	}
+	&-timebar{
+		.available{
+			div{
+				@extend .xb-button-primary;
+			}
+			&.item-selected div{
+				background-color: $primary-color !important;
+				background-image: none !important; 
+				span{
+					color: $primary-text-color !important;
+					background-image: none !important; 
+					&:before{
+						@extend .step4:before;
+						color: $primary-text-color !important;
+						font-size: 1em !important;
+						position: absolute;
+						margin-left: 57px !important;
+    					line-height: 14px;
+					}
+				}
+			}
+		}
+		.notAvailable div, .closed div{
+			background-color: $timeboard-bg-color !important;
+			span{
+				color: $secondary-color !important;
+				font-family: $primary-font-family;
+			}
+		}
+	}
+}
+
+.xb-tip{
+	h1, h2{
+		color: $primary-text-color !important;
+		font-family: $primary-font-family !important;
+	}
+}
+
+/*common text*/
+.xb-text-primary, .xb-text-bold, .xb-text-secondary, .xb-text-important{
+	font-family: $primary-font-family !important;
+}
+.xb-text-bold{
+	font-weight: $bold !important;
+	color: $primary-text-color !important;
+}
+.xb-text-secondary{
+	color: $review-text-color !important;
+}
+.xb-text-important{
+	color: $in-line-link !important;
+}
+/*e.o.common text*/
+
+.xb-reviewbook{
+	&-appointment{
+		box-shadow: none !important;
+		border: 1px solid $secondary-color !important;
+		@include border-radius($large-radius);
+		&-time{
+			.xb-paragraph{
+				color: $primary-text-color !important;
+				text-transform: $text-transform-up;
+				font-size: $content-header !important;
+				line-height: 32px !important;
+			}
+			#editTimeButton-btnEl, #editServicesButton-btnEl{
+				@extend .xb-button-secondary;
+			}
+			.servicesSummarySection, .end-section, .h-separator, .column1b tabel{
+				border-bottom: 1px solid $secondary-color !important;
+				td, th{
+					font-family: $primary-font-family;
+				}
+			}
+			.repair-note{
+				span{
+					color: $primary-text-color !important;
+				}
+			}
+		}
+	}
+	&-book{
+		.x-form-item{
+			label{
+				font-family: $primary-font-family !important;
+				color: $primary-text-color !important;
+				font-weight: $bold !important;
+				font-size: $small-text !important;
+			}
+			.x-form-field, .rb-inputTextMsg{
+				height: 28px;
+				border-color: $secondary-color !important;
+			}
+		}
+		.x-form-cb{
+			background-image: none !important;
+		    height: 16px !important;
+			width: 16px !important;
+			border: 1px solid $tertiary-color;
+		} 
+		.xb-check-box.x-form-cb-checked label:before{
+			content: $check-mark;
+  			font-family: $icon-family;
+  			font-size: 1.4em; 
+  			line-height: 10px;
+  			color: $in-line-link;
+  			position: absolute;
+  			margin-left: -21px;
+  		}
+	}
+}
+
+.xb-confirmation{
+	box-shadow: $border-shadow !important;
+	&-appointment{
+		border: 0px;
+		box-shadow: $none;
+		.xb-confirm-head{
+			font-size: $list-header !important;
+		}
+		.xb-text-important{
+			font-size: $list-header !important;
+			font-weight: $bold;
+		}
+		.xb-text-secondary{
+			font-size: $large-text !important;
+		}
+		.xb-text-primary{
+			color: $primary-text-color !important;
+		}
+		.xb-print{
+			background-image: none !important;
+			font-family: $secondary-font-family !important;
+			&:before{
+				font-size: 1.3em;
+			}	
+		}
+	}
+}
+
+.xb-registerform{
+	background-color: $timeboard-bg-color !important;
+	@include border-radius($medium-radius);
+	.x-panel-header{
+		background-color: $cart-popup-bg-color !important;
+		background-image: none !important;
+		@include border-top-right-radius($medium-radius);
+		@include border-top-left-radius($medium-radius);
+		span{
+			font-family: $primary-font-family !important;
+			font-weight: $bold !important;
+			text-shadow: none !important;
+			color: $secondary-text-color !important;
+		}
+	}
+	&-body{
+		background-color: $timeboard-bg-color !important;
+		margin-top:  5px !important;
+		.xb-text-primary{
+			font-size: $boarder-header !important;
+		}
+		.xb-registerform-separator{
+			background-image: none !important;
+			border-left: 1px solid $secondary-color !important;
+		}
+		.xb-label-comment .x-component{
+			font-size: $large-text;
+		}
+	}
+	&-input{
+		.xb-text-secondary{
+			font-size: $small-text !important;
+			text-transform: $text-transform-up !important;
+		}
+		.x-form-item-label{
+			font-family: $primary-font-family !important;
+			color: $primary-text-color;
+			font-weight: $bold !important;
+			font-size: $large-text !important;
+		}
+		input{
+			border: 1px solid $secondary-color !important;
+		}
+	}
+}
+
+.xb-homepage-head{
+	.xb-button-add{
+		box-shadow: none;
+		@extend .xb-button-secondary;
+		&:before{
+			content: $plus;
+			font-family: $icon-family;
+			font-size: 1.4em;
+			margin-left: 5px;
+			color: $secondary-text-color;
+			position: absolute;
+			line-height: 25px;
+			text-shadow: 2px 2px $tertiary-color;
+		}
+		&:after{
+			content: $car-side;
+			font-family: $icon-family;
+			font-size: 1.7em;
+			margin-left: 28px;
+			color: $secondary-text-color;
+			position: absolute;
+    		margin-top: -23px;
+    		text-shadow: 2px 2px $tertiary-color;
+		}
+	}
+	&-toolbar{
+		.x-toolbar-app-welcome{
+			font-family: $primary-font-family;
+			color: $review-text-color !important;
+		}
+		span, a{
+			font: normal $large-text $primary-font-family !important;
+			color: $primary-text-color !important;
+		}
+		.x-toolbar-separator-horizontal{
+			border: 1px solid $secondary-color !important;
+		}
+	}
+}
+
+.xb-homepage-body{
+		&-tab-parent, &-tab-service,
+		&-tab-parent.x-tab-over, &-tab-service.x-tab-over{
+			background-color: $home-tab-bg-color !important;
+			.x-tab-inner{
+					font-family: $primary-font-family;
+					color: $primary-text-color !important;
+					font-weight: $normal !important;
+				.year{
+					font-family: $primary-font-family !important;
+					color: $primary-text-color !important;
+					font-weight: $bold !important;
+				}
+			}
+			&.x-active{
+				background-color: $primary-color !important;
+				.tabIcon{
+					@extend .triangle-down-icon;
+				}
+			}	
+		}
+		&-tab-service, &-tab-service.x-tab-over{
+			&.x-active .tabIcon{
+				margin-left: 10px !important;
+			}
+		}
+
+}
+
+/*homepage tab icon*/
+div.parentTab.inactiveWithIcon .x-tab-inner,
+div.parentTab.activeGroup .x-tab-inner{
+	background-image: none !important;
+	&:before{
+		content: $car-side;
+		font-family: $icon-family;
+		font-size: 2.4em;
+		margin-left: -56px;
+		color: $tertiary-color;
+		position: absolute;
+		margin-top: 10px;
+	}
+	
+}
+
+.xb-homepage-info{
+	@include border-radius($large-radius); 
+	&-header{
+		text-transform: $text-transform-up;
+		font-size: $large-text;
+		padding-top: 5px;
+	}
+	&-mileage div{
+		font-family: $primary-font-family !important;
+		color: $primary-text-color;
+		font-weight: $bold !important;
+	}
+	&-separator{
+		display: none;
+	}
+	&-history{
+		span{
+			font-size: $small-text !important;
+		}
+	}
+	.xb-button-primary{
+		.xb-text-primary, .xb-text-bold{
+			color: $secondary-text-color !important;
+		}
+		.xb-text-bold{
+			text-transform: $text-transform-up;
+			color: $secondary-text-color !important;
+		}
+		&:hover{
+			background-color: $primary-color !important;
+			.xb-text-primary, .xb-text-bold{
+				color: $primary-text-color;
+			}
+
+		}
+	}
+	&-appointment{
+		.xb-label-comment{
+			color: $review-text-color !important;
+			.xb-text-secondary{
+				font-size: $content-header !important;
+			}
+		}
+	}
+	&-notification{
+		background-color: $timeboard-bg-color !important;
+		border-radius: $small-radius !important;
+		.xb-text-bold{
+			text-transform: $text-transform-up;
+		}
+		.xb-close-icon{
+			width: 20px !important;
+    		height: 20px;
+    		background-color: $tertiary-color !important;
+    		margin-top: 4px;
+    		&:before{
+    			line-height: 19px;
+    		}
+		}
+	}
+}
+
+.xb-reminder-setting{
+	border-radius: $small-radius !important;
+	div{
+		font-family: $primary-font-family !important;
+		color: $primary-text-color !important;
+		font-weight: $bold !important;
+	}
+	&-button .xb-button-secondary .x-btn-icon-el:before{
+		content: $clock;
+		font-family: $icon-family;
+		font-size: 1em;
+		color: $secondary-text-color;
+		margin-left: -99px;
+    	line-height: 22px;
+	}
+}
+
+.xb-panel-setting{
+	&-head{
+		font-size: $boarder-header !important;
+		text-transform: $text-transform-up !important;
+	}
+	&-tab .x-btn-inner{
+		font-family: $primary-font-family !important;
+		color: $review-text-color !important;
+		text-transform: $text-transform-up !important;
+		font-size: $content-header;
+		line-height: 24px !important;
+	}
+	&-tab.selected{
+		.tabIcon{
+		background-image: none !important;
+			&:before{
+				content: $drop-down;
+				font-family: $icon-family;
+				font-size: 1.5em;
+				line-height:2px;
+				color: $secondary-color;
+				position: absolute;
+			}
+		}
+	}
+	&-subsection{
+		border-radius: $medium-radius !important;
+		background-color: $timeboard-bg-color !important;
+		&-header{
+			text-transform: $text-transform-up;
+			font-size: $large-text !important;
+		}
+		&-table{
+			.xb-text-secondary{
+				text-transform: $text-transform-up;
+				font-size: $large-text !important;
+			}
+			.odd, .even{
+				border-color: $tertiary-color !important;
+			}
+			.xb-cell-odd, .xb-cell-even, .odd, .even{
+				background-color: $secondary-color !important;
+				.x-component{
+					font-family: $primary-font-family;
+				}
+			}
+			.xb-cell-even, .even{
+				background-color: transparent !important;
+			}
+		}
+		.x-header-text{
+			font-family: $primary-font-family !important;
+			color: $primary-text-color !important;
+			font-weight: $bold !important;
+			line-height: 28px !important;
+		}
+		.summary{
+			font-family: $primary-font-family !important;;
+			line-height: 20px !important;
+		}
+		.expandTool{
+			background-image: none !important;
+			border: 3px solid $secondary-color;
+			&:before{
+				content: $plus;
+				font-family: $icon-family;
+				font-size: 1em;
+				margin-left: 3px;
+				color: $primary-text-color;
+				line-height: 16px;
+			}
+		}
+
+		.xb-schedule{
+			background-color: transparent !important;
+			.x-form-item-label{
+				font-family: $primary-font-family !important;
+				color: $primary-text-color !important;
+				font-weight: $bold !important;
+				font-size: $large-text;
+			}
+			.x-form-item-body{
+				@extend .xb-form-panel;
+				background-color: transparent !important;
+				.x-form-arrow-trigger{
+					border-color: $form-border-color !important;
+				}
+				.xb-arrow-down:before{
+					font-size: 1.2em;
+					position: absolute;
+					line-height: 22px;
+					margin-left: 1px !important;
+				}
+				input{
+					font-family: $primary-font-family;
+				}
+			}
+		}
+		&.xt-vehDetail .x-table-plain, .xb-item-form{
+			.x-form-item-label{
+				font-family: $primary-font-family !important;
+				color: $primary-text-color !important;
+				font-weight: $bold !important;
+				font-size: $large-text;
+			}
+			.x-form-field{
+				height: 25px !important;
+				border: 1px solid $secondary-color !important;
+				font-family: $primary-font-family;
+			}
+		}
+		.x-component{
+			font-family: $primary-font-family !important;
+		}
+	}
+	.xb-button-secondary{
+		border-radius: $small-radius !important;
+		border: none !important;
+		span{
+			line-height: 23px !important;
+		}
+	}
+
+	.closeButton{
+		background-image: none !important;
+	}
+	.xb-close-icon{
+		height: 21px;
+		width: 21px;
+		background-color: $tertiary-color !important;
+		&:before{
+			margin-left: 4px;
+			position: absolute;
+			font-size: $content-header;
+  			line-height: 20px !important;
+		}
+	}
+}
+
+/*my home page car menu drop down*/
+.xb-tab-menu{
+	.x-component{
+		background-image: none !important;
+		background-color: $secondary-color !important;
+		color: $secondary-text-color !important;
+		&:hover{
+			background-color: $tertiary-color !important;
+		}
+
+	}
+}
+
+.xb-lostusername, 
+.xb-home-popup{
+	border-radius: $box-radius !important;
+	h1, h2{
+		font-family: $primary-font-family;
+		color: $primary-text-color !important;
+	}
+	.xb-button-secondary{
+		border: none !important;
+		border-radius: $small-radius !important;
+		span{
+			line-height: 23px !important;
+		}
+	}
+	&-email label, .xt-findme-or-container-empty{
+		font-family: $primary-font-family;
+		font-weight: $bold;
+	}
+	.xb-close-icon:before{
+		font-size: 1.5em !important;
+    	margin-left: 5px !important;
+	}
+	.xt-findme-phonesearch-label-empty{
+		font-family: $primary-font-family;
+		color: $primary-text-color !important;
+		text-transform: $text-transform-up;
+	}
+
+	.xb-panel-setting-subsection{
+		.btn-previous{
+			@extend .xb-arrow-left;
+		}
+		.btn-next{
+			@extend .xb-arrow-right;
+		}
+		.xb-confirmation-verify{
+			font-size: $large-text !important;
+		}
+	}
+	
+}
+
+/*find me popup multiple*/
+.xt-findme-or-container-multiple,
+.xt-findme-or-container-single{
+	font-family: $primary-font-family !important;
+	color: $primary-text-color !important;
+	font-weight: $bold !important;
+}
+/*e.o. find me popup multiple*/
+
+/*mfg.Campaign*/
+.xb-campaign{
+	.xb-button-secondary{
+		border: none !important;
+		span{
+			line-height: 24px !important;
+		}
+	}
+	.x-form-item-body:before{
+		margin-left: 157px !important;
+	}
+	.xb-individualservice-search-input{
+		margin-left: 0px !important;
+	}
+}
+/*e.o. mfg.Campaign*/
+
+.xb-sidecalendar{
+	.xb-button-primary{
+		border: none !important;
+		border-radius: $small-radius !important;
+		span{
+			line-height: 13px !important;
+		}
+	}
+	.x-datepicker-next{
+		background-image: none !important;
+		@extend .xb-arrow-right:before;
+		text-decoration:none !important;
+		&:before{
+			@extend .xb-arrow-right:before;
+			font-size: 1.2em !important;
+			line-height: 22px !important;
+		}
+	}
+	.x-datepicker-prev{
+		background-image: none !important;
+		@extend .xb-arrow-left:before;
+		text-decoration:none !important;
+		&:before{
+			@extend .xb-arrow-left:before;
+			font-size: 1.2em !important;
+			line-height: 22px !important;
+		}
+	}
+
+	.x-datepicker-header .x-btn-disabled {
+	    opacity: .3!important;
+	}
+	.x-datepicker-month span,
+	.x-datepicker-column-header-inner{
+		font-family: $primary-font-family;
+		color: $primary-text-color;
+	}
+	.x-datepicker-cell{
+		a,
+		&.x-datepicker-prevday.x-datepicker-disabled a:hover,
+		&.x-datepicker-active.x-datepicker-disabled a:hover{
+			color: $primary-text-color !important;
+		}
+		&.x-datepicker-active.x-datepicker-disabled a{
+			background-color: $selector-bg-color !important;
+		}
+		&.x-datepicker-active.x-datepicker-selected a,
+		&.x-datepicker-prevday.x-datepicker-selected a{
+			background-color: $primary-color !important;
+		}
+		&.x-datepicker-active.x-datepicker-hover a,
+		&.x-datepicker-prevday.x-datepicker-hover a{
+			background-color: $timeboard-bg-color !important;
+		}
+
+	}
+}
+
+/*timeline*/
+.timeLine-select{               //.xb-timeline-head
+	h4{
+		font-family: $primary-font-family !important;
+
+	}
+	.xt-app-timeline-groupers{   //.xb-timeline-head-button
+		.item{
+			@extend .xb-button-primary;
+			background-image: none !important;
+			border-radius: $small-radius !important;
+			border: none !important;
+			span{
+				font-family: $secondary-font-family !important;
+			}
+			&.item-selected{
+				border: none !important;
+				span{
+					background-image: none !important;
+				}
+				&:before{
+					@extend .xb-model-check-icon:before;
+					color: $primary-text-color;
+					font-size: 1.4em;
+    				margin-left: -34px;
+    				line-height: 19px;
+    				position: absolute;
+				}
+			}	
+		}
+	}
+}
+
+.btn-previousTL,
+.btn-nextTL{
+	margin-top: 0px !important;
+	background-image: none !important;
+	background-color: $secondary-color !important;
+	&:before{
+		content: $arrow-left;
+		font-family: $icon-family;
+		font-size: 1.4em;
+		line-height: 39px !important;
+	    margin-left: 9px !important;
+	    margin-top: 5px;
+	    color: $tertiary-color !important;
+	}
+}
+
+.btn-nextTL{
+	background-color: $table-hover-color !important;
+	&:before{
+		content: $arrow-right;
+		margin-left: 5px;
+	    line-height: 30px; 
+	}
+}
+
+.xt-panelPast{					//.xb-timeline-past
+	background: $home-tab-bg-color !important; /* Old browsers */
+	background: -moz-linear-gradient(right,  $home-tab-bg-color 0%, $secondary-gradient-stop 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(right,  $home-tab-bg-color 0%,$secondary-gradient-stop 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to left,  $home-tab-bg-color 0%,$secondary-gradient-stop 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$home-tab-bg-color', endColorstr='$secondary-gradient-stop',GradientType=0 ) !important; /* IE6-9 */
+	.titleTimeline{
+		font-family: $primary-font-family !important;
+		color: $review-text-color !important;
+	}
+	.panel-packService{			//.xb-timeline-past-panel
+		.packService{
+			.item.disable{
+				background-color: $price-bg-color !important;
+			}
+			.itemDate .itemRange,
+			.itemDate .itemYear{
+				font-size: $small-text;
+				color: $secondary-text-color !important;
+			}
+			
+
+		}
+	}
+}
+
+.xt-panelFuture{				//.xb-timeline-future
+	background-color: $page-background-color;
+	.titleTimeline{
+		font-family: $primary-font-family !important;
+		color: $review-text-color !important;
+	}
+	.panel-packService{
+		.packService{
+			.item{
+				border: 1px solid $secondary-color;
+				box-shadow: none;
+				border-radius: $medium-radius !important;
+				.item-ctn, .topVal{
+					font-size: $page-titles;
+					color: $review-text-color;
+				}
+				.packDate.pack-name{
+					font-size: $small-text;
+				}
+				.packMsgResalt{
+						color: $review-text-color !important;
+						background-image: none !important;
+						&:before{
+							content: $star;
+							font-family: $icon-family;
+							font-size: 1.2em;
+							margin-left: 83px;
+							color: $review-text-color;
+							position: absolute;
+						}
+					}
+
+				&:hover{
+					background-image: none !important;
+					background-color: $tertiary-color;
+					border: 1px solid $tertiary-color;
+					box-shadow: none;
+					.item-ctn, .packDate.pack-name, .topVal{
+						color: $secondary-text-color !important;
+					}
+					.packMsgResalt{
+						color: $secondary-text-color !important;
+						background-image: none !important;
+						&:before{
+							content: $star;
+							font-family: $icon-family;
+							font-size: 1.2em;
+							margin-left: 83px;
+							color: $secondary-text-color;
+							position: absolute;
+						}
+					}
+				}
+				&.item-selected, &:hover.item-selected{
+					background-image: none !important;
+					background-color: $primary-color !important;
+					border: 1px solid $primary-color;
+					box-shadow: none;
+					.item-ctn, .packDate.pack-name, .topVal{
+						color: $primary-text-color !important;
+					}
+					.packMsgResalt{
+						color: $primary-text-color !important;
+						background-image: none !important;
+						&:before{
+							content: $star;
+							font-family: $icon-family;
+							font-size: 1.2em;
+							margin-left: 83px;
+							color: $tertiary-color;
+							position: absolute;
+						}
+					}
+				}
+			}
+			.itemDate .itemRange,
+			.itemDate .itemYear{
+				font-family: $primary-font-family !important;
+				color: $review-text-color !important;
+				text-shadow: none !important;
+			}
+		}
+	}
+}
+
+.timeline-accurate-estimate{
+	div{
+		font-family: $primary-font-family !important;
+		color: $primary-text-color !important;
+		font-size: $small-text;
+	}
+}
+
+.xt-ServiceHistory{
+	.x-panel-header .x-panel-header-body .x-box-inner{
+		background-image: none !important;
+		background-color: $cart-popup-bg-color !important;
+		@include border-top-right-radius($large-radius);
+		@include border-top-left-radius($large-radius);
+		span{
+			font-family: $primary-font-family !important;
+			color: $primary-text-color;
+		}
+	}
+	.xt-ServiceHistory .x-panel-body{
+		box-shadow: none !important;
+	}
+	.service-detail-header{
+		background-color: $selector-bg-color;
+		.service-detail-service-name-list,
+		.service-detail-bubble-container{
+			background-image: none !important;
+			background-color: transparent;
+			.serviceDetail-recomended{
+				font-family: $primary-font-family;
+			}
+			.basicButton2{
+				@extend .xb-button-secondary;
+				box-shadow: none !important;
+				border-radius: $small-radius !important;
+			}
+		}
+	}
+	.service-detail-header-package {
+		div{
+			font-family: $primary-font-family !important;
+			color: $primary-text-color;
+
+		}
+	}
+	.service-detail-future-button{
+		.x-prevnext-prev-icon{
+				background-image: none !important;
+				@extend .xb-arrow-left;
+		}
+		.x-prevnext-next-icon{
+				background-image: none !important;
+				@extend .xb-arrow-right;
+		}
+	}
+	
+	.service-detail-service-name-list,
+	.service-detail-column-package{
+		.service-detail-row-odd,
+		.service-detail-row-even{
+			background-color: $selector-bg-color;
+			font-family: $primary-font-family;
+		}
+		.service-detail-row-even{
+			background-color: $timeboard-bg-color !important;
+		}
+	}
+	.service-detail-column-package{
+		.service-detail-row{
+			.service-detail-service-package{
+				background-image: none !important;
+			}
+			.service-detail-service-package:before{
+				@extend .xb-dot;
+				content: '';
+   				height: 8px !important;
+   				width: 8px !important;
+  				position: absolute;
+  				margin-left: 45px;
+			}
+		}
+	}
+}
+/*e.o. timeline*/
+.xb-terms-link{
+	.x-btn-inner{
+		font-size: $tiny-text;
+		font-family: $tertiary-font-family;
+		line-height: 25px;
+		color: $secondary-color;
+		font-weight: $medium;
+	}
+	&:hover .x-btn-inner{
+		color: $primary-text-color !important;
+	}
+}
+
+
+
+
+
+
+
+
