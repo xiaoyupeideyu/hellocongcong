@@ -71,24 +71,7 @@ secondary-text-color !important;
 /* left arrow */
 .xb-arrow-left{
 	&.x-btn.btn-previous, &.x-btn, .x-btn.btn-previous, &.backButton, &{
-		&:before{
-			content: $arrow-left;
-			font-family: $icon-family;
-			font-size: 1.4em;
-			margin-left: 5px;
-			color: $dropdown-bg-color;
-		}
-		&:hover:before, &.x-over, &.x-pressed{
-			color: $secondary-color;
-		}
-	}
-	&.x-btn.btn-previous, &.x-btn, .x-btn.btn-previous, &{
-		background-image: none !important;
-	}
-}
-.xb-pagination, .xt-list-pagination{
-	&.x-btn.btn-previous, &.x-btn, .x-btn.btn-previous, &.backButton{
-		&:before{
+		
 			content: $arrow-left;
 			font-family: $icon-family;
 			font-size: 1.4em;
