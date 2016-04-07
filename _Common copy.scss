@@ -4,42 +4,6 @@
 @import 'compass/css3';
 
 /* primary button*/
-.xb-button{
-	box-sizing:border-box;
-    display:inline-block;
-    cursor:pointer;
-	box-shadow:none;
-	text-align:center;
-	&-primary{
-			background-color: $primary-button-bg-color !important;
-			@include border-radius($medium-radius); 
-			line-height: $big-button;
-
-			.x-btn-inner, span, .item-label{
-				color:  $primary-button-text-color !important;
-			  	font-family: $primary-font-family !important;
-			  	font-size: $large-text;
-			  	font-weight:$normal;
-			  	line-height: $big-button;
-			  	text-transform: $text-transform-cap;
-		    }
-
-		&:hover, &.x-over, &.item-over{
-		   	background-color: $primary-button-bg-color-hover !important;
-		   	.x-btn-inner, span{
-				color:  $primary-button-text-color-hover !important;
-			}
-	    }	
-  
-        &:active, &.x-pressed, &.item-selected, &.x-pressed.x-btn-pressed, &.x-item-selected {
-		  	background-color: $primary-button-bg-color-selected !important;
-		  	.x-btn-inner, span, .item-label{
-				color:  $primary-button-text-color-selected !important;
-			}
-	    }
-	}
-}
-/* eo. primary button */
 
 /* year selector choose */
 .xb-selector-year-choose .item{
