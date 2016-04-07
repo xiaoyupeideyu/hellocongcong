@@ -10,20 +10,7 @@
 	@extend .xb-button-primary;
 }
 
-/* secondary button */
-.xb-button{
-	&-secondary{
-		background-color: $primary-gradient-start !important; 
-		background: $primary-gradient-start; /* Old browsers */
-	background: -moz-linear-gradient(top,  $primary-gradient-start 0%, $primary-gradient-stop 100%) !important; /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  $primary-gradient-start 0%,$primary-gradient-stop 100%) !important; /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  $primary-gradient-start 0%,$primary-gradient-stop 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary-gradient-start', endColorstr='$primary-gradient-stop',GradientType=0 ) !important; /* IE6-9 */
-		@include border-radius($medium-radius); 
-			.x-btn-inner, span{
-				line-height: $big-button;
-		    	font-size:$large-text;
-		   	 	color:$secondary-text-color !important;
+secondary-text-color !important;
 		    	font-weight:$bold !important;
 				font-family: $secondary-font-family !important;
 				background-image: none !important;
