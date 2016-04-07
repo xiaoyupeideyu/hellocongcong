@@ -56,21 +56,7 @@ secondary-text-color !important;
 		}
 		.xb-selector-year-choose .item{
 			@include border-radius($medium-radius); 
-			& span{
-				color: $secondary-text-color;
-				font-family:$secondary-font-family;
-			}
-			&.item-selected span{
-				color: $primary-text-color;
-			}
-		}
-	}
-}
-/* eo. year selector */
-
-/* left arrow */
-.xb-arrow-left{
-	&.x-btn.btn-previous, &.x-btn, .x-btn.btn-previous, &.backButton, &{
+		-previous, &.backButton, &{
 		
 			content: $arrow-left;
 			font-family: $icon-family;
