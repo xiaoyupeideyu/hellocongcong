@@ -10,32 +10,7 @@
 	@extend .xb-button-primary;
 }
 
-secondary-text-color !important;
-		    	font-weight:$bold !important;
-				font-family: $secondary-font-family !important;
-				background-image: none !important;
-			}
-		&:hover, &.x-over,
-		&:active, &.x-pressed, &.x-button-pressing{
-			background-color: $primary-gradient-stop; 
-			@include filter-gradient($primary-gradient-stop, $primary-gradient-start, vertical);
-			$experimental-support-for-svg: true;
-			@include background-image(linear-gradient(top,  $primary-gradient-stop 0%, $primary-gradient-start 100%));
-		}
-	}
-}
-/* eo. secondary button */
-
-/* movealong button */
-.xb-button{
-	&-movealong{
-		@include border-radius($medium-radius); 
-		@extend .xb-button-secondary;
-		box-shadow: $none;
-		&.disabled{
-			background-color: $secondary-color;
-		}
-
+twooooooo
 		&.x-item-disabled{
 			opacity: 0.3 !important;
 		}
